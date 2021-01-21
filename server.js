@@ -16,7 +16,10 @@ app.get("*", function(req, res) {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/constitutionproject");
+mongoose.connect("mongodb://localhost/constitutionproject");
+// Change to this one below when everything is ready to go online
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/constitutionproject");
+
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
