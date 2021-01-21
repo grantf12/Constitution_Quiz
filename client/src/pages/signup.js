@@ -1,24 +1,17 @@
 import React from "react";
-import LoginForm from "../component/loginform/loginform";
-
+import SignupForm from "../component/signupform/signup"
 
 const Signup = () => {
-return(
-    <div>
+    return(
+        <div>
+            < SignupForm />
 
-<LoginForm />
+        </div>
 
-    </div>
-
-
-
-
-)
+    )
 
 
 
 }
-
-
 
 export default Signup
