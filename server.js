@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const mongoose = require("mongoose");
 const logger = require("morgan");
 const User = require("./database/models/user");
 const session = require("express-session")
@@ -38,15 +37,15 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use("/user", user)
 // Creates User on submit
-app.post("/submit", ({ body }, res) => {
-  User.create(body)
-    .then(dbUser => {
-      res.json(dbUser);
-    })
-    .catch(err => {
-      res.json(err);
-    });
-});
+// app.post("/submit", ({ body }, res) => {
+//   User.create(body)
+//     .then(dbUser => {
+//       res.json(dbUser);
+//     })
+//     .catch(err => {
+//       res.json(err);
+//     });
+// });
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -60,7 +59,7 @@ app.get("*", (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/constitutionproject");
+// mongoose.connect("mongodb://localhost/constitutionproject");
 // Change to this one below when everything is ready to go online
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/constitutionproject");
 

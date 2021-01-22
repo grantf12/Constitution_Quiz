@@ -4,9 +4,9 @@ const bcrypt = require("bcryptjs")
 mongoose.promise = Promise;
 
 const userSchema = new Schema({
-    username: {type: String, unique: false, required: false},
-    password: { type: String, unique: false, required: false},
-    score: { type: Number, unique: false, required: false}
+    username: {type: String, unique: true, required: true},
+    password: { type: String, unique: false, required: true},
+    score: { type: Number, unique: false, required: false, default: 0}
 })
 
 
