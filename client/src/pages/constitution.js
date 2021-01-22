@@ -9,8 +9,22 @@ const constitution = () => {
   defence, promote the general Welfare, and secure the Blessings of Liberty to
   ourselves and our Posterity, do ordain and establish this Constitution for the
   United States of America.</h3>
-
-  <h2>Article 1</h2>
+  
+<h2>Links</h2>
+    <ul>
+      <li><a href="#Article 1">Article 1</a></li> 
+      <li><a href="#Article 2">Article 2</a></li>
+      <li><a href="#Article 3">Article 3</a></li>
+      <li><a href="#Article 4">Article 4</a></li>
+      <li><a href="#Article 5">Article 5</a></li>
+      <li><a href="#Article 6">Article 6</a></li>
+      <li><a href="#Article 7">Article 7</a></li>
+    </ul>
+    <ul>
+      <li><a href="#Amendments">Amendments</a></li>
+      <li><a href="#Bill Of Rights">Bill of Rights</a></li>
+    </ul>
+  <h2 id="Article 1">Article 1</h2>
     <h3>Section 1</h3>
       <ul><p>All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.</p></ul>
     <h3>Section 2</h3>
@@ -76,7 +90,7 @@ const constitution = () => {
       <p>No State shall, without the Consent of the Congress, lay any Imposts or Duties on Imports or Exports, except what may be absolutely necessary for executing its inspection Laws: and the net Produce of all Duties and Imposts, laid by any State on Imports or Exports, shall be for the Use of the Treasury of the United States; and all such Laws shall be subject to the Revision and Control of the Congress.</p>
       <p>No State shall, without the Consent of Congress, lay any duty of Tonnage, keep Troops, or Ships of War in time of Peace, enter into any Agreement or Compact with another State, or with a foreign Power, or engage in War, unless actually invaded, or in such imminent Danger as will not admit of delay.</p></ul>
       
-  <h2>Article 2</h2>
+  <h2 id="Article 2">Article 2</h2>
     <h3>Section 1</h3>
       <ul><p>The executive Power shall be vested in a President of the United States of America. He shall hold his Office during the Term of four Years, and, together with the Vice-President chosen for the same Term, be elected, as follows:</p>
       <p>Each State shall appoint, in such Manner as the Legislature thereof may direct, a Number of Electors, equal to the whole Number of Senators and Representatives to which the State may be entitled in the Congress: but no Senator or Representative, or Person holding an Office of Trust or Profit under the United States, shall be appointed an Elector.</p>
@@ -96,7 +110,7 @@ const constitution = () => {
     <h3>Section 4</h3>
       <ul><p>The President, Vice President and all civil Officers of the United States, shall be removed from Office on Impeachment for, and Conviction of, Treason, Bribery, or other high Crimes and Misdemeanors.</p></ul>
 
-  <h2>Article 3</h2>
+  <h2 id="Article 3">Article 3</h2>
     <h3>Section 1</h3>
     <ul><p>The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish. The Judges, both of the supreme and inferior Courts, shall hold their Offices during good Behavior, and shall, at stated Times, receive for their Services a Compensation which shall not be diminished during their Continuance in Office.</p></ul>
     <h3>Section 2</h3>
@@ -107,7 +121,7 @@ const constitution = () => {
     <ul><p>Treason against the United States, shall consist only in levying War against them, or in adhering to their Enemies, giving them Aid and Comfort. No Person shall be convicted of Treason unless on the Testimony of two Witnesses to the same overt Act, or on Confession in open Court.</p>
       <p>The Congress shall have power to declare the Punishment of Treason, but no Attainder of Treason shall work Corruption of Blood, or Forfeiture except during the Life of the Person attainted.</p></ul>
       
-  <h2>Article 4</h2>
+  <h2 id="Article 4">Article 4</h2>
     <h3>Section 1</h3>
     <ul><p>Full Faith and Credit shall be given in each State to the public Acts, Records, and judicial Proceedings of every other State. And the Congress may by general Laws prescribe the Manner in which such Acts, Records and Proceedings shall be proved, and the Effect thereof.</p></ul>
     <h3>Section 2</h3>
@@ -120,20 +134,20 @@ const constitution = () => {
     <h3>Section 4</h3>
     <ul><p>The United States shall guarantee to every State in this Union a Republican Form of Government, and shall protect each of them against Invasion; and on Application of the Legislature, or of the Executive (when the Legislature cannot be convened) against domestic Violence.</p></ul>
     
-  <h2>Article 5</h2>
+  <h2 id="Article 5">Article 5</h2>
   <ul><p>The Congress, whenever two thirds of both Houses shall deem it necessary, shall propose Amendments to this Constitution, or, on the Application of the Legislatures of two thirds of the several States, shall call a Convention for proposing Amendments, which, in either Case, shall be valid to all Intents and Purposes, as part of this Constitution, when ratified by the Legislatures of three fourths of the several States, or by Conventions in three fourths thereof, as the one or the other Mode of Ratification may be proposed by the Congress; Provided that no Amendment which may be made prior to the Year One thousand eight hundred and eight shall in any Manner affect the first and fourth Clauses in the Ninth Section of the first Article; and that no State, without its Consent, shall be deprived of its equal Suffrage in the Senate.</p></ul>
 
-  <h2>Article 6</h2>
+  <h2 id="Article 6">Article 6</h2>
   <ul><p>All Debts contracted and Engagements entered into, before the Adoption of this Constitution, shall be as valid against the United States under this Constitution, as under the Confederation.</p>
       <p>This Constitution, and the Laws of the United States which shall be made in Pursuance thereof; and all Treaties made, or which shall be made, under the Authority of the United States, shall be the supreme Law of the Land; and the Judges in every State shall be bound thereby, any Thing in the Constitution or Laws of any State to the Contrary notwithstanding.</p>
       <p>The Senators and Representatives before mentioned, and the Members of the several State Legislatures, and all executive and judicial Officers, both of the United States and of the several States, shall be bound by Oath or Affirmation, to support this Constitution; but no religious Test shall ever be required as a Qualification to any Office or public Trust under the United States.</p></ul>
       
-  <h2>Article 7</h2>
+  <h2 id="Article 7">Article 7</h2>
   <ul><p>The Ratification of the Conventions of nine States, shall be sufficient for the Establishment of this Constitution between the States so ratifying the Same.</p>
     <p>Done in Convention by the Unanimous Consent of the States present the Seventeenth Day of September in the Year of our Lord one thousand seven hundred and Eighty seven and of the Independence of the United States of America the Twelfth. In Witness whereof We have hereunto subscribed our Names.</p></ul>
 
-<h1>Amendments</h1>
-    <h2>Bill Of Rights: </h2>
+<h1 id="Amendments">Amendments</h1>
+    <h2 id="Bill Of Rights">Bill Of Rights: </h2>
     <ul>
       <li>
         <h3>Amendment 1</h3>
