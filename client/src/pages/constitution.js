@@ -9,9 +9,23 @@ const constitution = () => {
       defence, promote the general Welfare, and secure the Blessings of Liberty to
       ourselves and our Posterity, do ordain and establish this Constitution for the
   United States of America.</h3>
-
-      <h2>Article 1</h2>
-      <h3>Section 1</h3>
+  
+<h2>Links</h2>
+    <ul>
+      <li><a href="#Article 1">Article 1</a></li> 
+      <li><a href="#Article 2">Article 2</a></li>
+      <li><a href="#Article 3">Article 3</a></li>
+      <li><a href="#Article 4">Article 4</a></li>
+      <li><a href="#Article 5">Article 5</a></li>
+      <li><a href="#Article 6">Article 6</a></li>
+      <li><a href="#Article 7">Article 7</a></li>
+    </ul>
+    <ul>
+      <li><a href="#Amendments">Amendments</a></li>
+      <li><a href="#Bill Of Rights">Bill of Rights</a></li>
+    </ul>
+  <h2 id="Article 1">Article 1</h2>
+    <h3>Section 1</h3>
       <ul><p>All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.</p></ul>
       <h3>Section 2</h3>
       <ul><p>The House of Representatives shall be composed of Members chosen every second Year by the People of the several States, and the Electors in each State shall have the Qualifications requisite for Electors of the most numerous Branch of the State Legislature.</p>
@@ -73,11 +87,11 @@ const constitution = () => {
         <p>No Title of Nobility shall be granted by the United States: And no Person holding any Office of Profit or Trust under them, shall, without the Consent of the Congress, accept of any present, Emolument, Office, or Title, of any kind whatever, from any King, Prince or foreign State.</p></ul>
       <h3>Section 10</h3>
       <ul><p>No State shall enter into any Treaty, Alliance, or Confederation; grant Letters of Marque and Reprisal; coin Money; emit Bills of Credit; make any Thing but gold and silver Coin a Tender in Payment of Debts; pass any Bill of Attainder, ex post facto Law, or Law impairing the Obligation of Contracts, or grant any Title of Nobility.</p>
-        <p>No State shall, without the Consent of the Congress, lay any Imposts or Duties on Imports or Exports, except what may be absolutely necessary for executing its inspection Laws: and the net Produce of all Duties and Imposts, laid by any State on Imports or Exports, shall be for the Use of the Treasury of the United States; and all such Laws shall be subject to the Revision and Control of the Congress.</p>
-        <p>No State shall, without the Consent of Congress, lay any duty of Tonnage, keep Troops, or Ships of War in time of Peace, enter into any Agreement or Compact with another State, or with a foreign Power, or engage in War, unless actually invaded, or in such imminent Danger as will not admit of delay.</p></ul>
-
-      <h2>Article 2</h2>
-      <h3>Section 1</h3>
+      <p>No State shall, without the Consent of the Congress, lay any Imposts or Duties on Imports or Exports, except what may be absolutely necessary for executing its inspection Laws: and the net Produce of all Duties and Imposts, laid by any State on Imports or Exports, shall be for the Use of the Treasury of the United States; and all such Laws shall be subject to the Revision and Control of the Congress.</p>
+      <p>No State shall, without the Consent of Congress, lay any duty of Tonnage, keep Troops, or Ships of War in time of Peace, enter into any Agreement or Compact with another State, or with a foreign Power, or engage in War, unless actually invaded, or in such imminent Danger as will not admit of delay.</p></ul>
+      
+  <h2 id="Article 2">Article 2</h2>
+    <h3>Section 1</h3>
       <ul><p>The executive Power shall be vested in a President of the United States of America. He shall hold his Office during the Term of four Years, and, together with the Vice-President chosen for the same Term, be elected, as follows:</p>
         <p>Each State shall appoint, in such Manner as the Legislature thereof may direct, a Number of Electors, equal to the whole Number of Senators and Representatives to which the State may be entitled in the Congress: but no Senator or Representative, or Person holding an Office of Trust or Profit under the United States, shall be appointed an Elector.</p>
         <p>The Electors shall meet in their respective States, and vote by Ballot for two persons, of whom one at least shall not lie an Inhabitant of the same State with themselves. And they shall make a List of all the Persons voted for, and of the Number of Votes for each; which List they shall sign and certify, and transmit sealed to the Seat of the Government of the United States, directed to the President of the Senate. The President of the Senate shall, in the Presence of the Senate and House of Representatives, open all the Certificates, and the Votes shall then be counted. The Person having the greatest Number of Votes shall be the President, if such Number be a Majority of the whole Number of Electors appointed; and if there be more than one who have such Majority, and have an equal Number of Votes, then the House of Representatives shall immediately choose by Ballot one of them for President; and if no Person have a Majority, then from the five highest on the List the said House shall in like Manner choose the President. But in choosing the President, the Votes shall be taken by States, the Representation from each State having one Vote; a quorum for this Purpose shall consist of a Member or Members from two-thirds of the States, and a Majority of all the States shall be necessary to a Choice. In every Case, after the Choice of the President, the Person having the greatest Number of Votes of the Electors shall be the Vice President. But if there should remain two or more who have equal Votes, the Senate shall choose from them by Ballot the Vice-President.</p>
@@ -96,47 +110,47 @@ const constitution = () => {
       <h3>Section 4</h3>
       <ul><p>The President, Vice President and all civil Officers of the United States, shall be removed from Office on Impeachment for, and Conviction of, Treason, Bribery, or other high Crimes and Misdemeanors.</p></ul>
 
-      <h2>Article 3</h2>
-      <h3>Section 1</h3>
-      <ul><p>The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish. The Judges, both of the supreme and inferior Courts, shall hold their Offices during good Behavior, and shall, at stated Times, receive for their Services a Compensation which shall not be diminished during their Continuance in Office.</p></ul>
-      <h3>Section 2</h3>
-      <ul><p>The judicial Power shall extend to all Cases, in Law and Equity, arising under this Constitution, the Laws of the United States, and Treaties made, or which shall be made, under their Authority; to all Cases affecting Ambassadors, other public Ministers and Consuls; to all Cases of admiralty and maritime Jurisdiction; to Controversies to which the United States shall be a Party; to Controversies between two or more States; between a State and Citizens of another State; between Citizens of different States; between Citizens of the same State claiming Lands under Grants of different States, and between a State, or the Citizens thereof, and foreign States, Citizens or Subjects.</p>
-        <p>In all Cases affecting Ambassadors, other public Ministers and Consuls, and those in which a State shall be Party, the supreme Court shall have original Jurisdiction. In all the other Cases before mentioned, the supreme Court shall have appellate Jurisdiction, both as to Law and Fact, with such Exceptions, and under such Regulations as the Congress shall make.</p>
-        <p>The Trial of all Crimes, except in Cases of Impeachment, shall be by Jury; and such Trial shall be held in the State where the said Crimes shall have been committed; but when not committed within any State, the Trial shall be at such Place or Places as the Congress may by Law have directed.</p></ul>
-      <h3>Section 3</h3>
-      <ul><p>Treason against the United States, shall consist only in levying War against them, or in adhering to their Enemies, giving them Aid and Comfort. No Person shall be convicted of Treason unless on the Testimony of two Witnesses to the same overt Act, or on Confession in open Court.</p>
-        <p>The Congress shall have power to declare the Punishment of Treason, but no Attainder of Treason shall work Corruption of Blood, or Forfeiture except during the Life of the Person attainted.</p></ul>
+  <h2 id="Article 3">Article 3</h2>
+    <h3>Section 1</h3>
+    <ul><p>The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish. The Judges, both of the supreme and inferior Courts, shall hold their Offices during good Behavior, and shall, at stated Times, receive for their Services a Compensation which shall not be diminished during their Continuance in Office.</p></ul>
+    <h3>Section 2</h3>
+    <ul><p>The judicial Power shall extend to all Cases, in Law and Equity, arising under this Constitution, the Laws of the United States, and Treaties made, or which shall be made, under their Authority; to all Cases affecting Ambassadors, other public Ministers and Consuls; to all Cases of admiralty and maritime Jurisdiction; to Controversies to which the United States shall be a Party; to Controversies between two or more States; between a State and Citizens of another State; between Citizens of different States; between Citizens of the same State claiming Lands under Grants of different States, and between a State, or the Citizens thereof, and foreign States, Citizens or Subjects.</p>
+      <p>In all Cases affecting Ambassadors, other public Ministers and Consuls, and those in which a State shall be Party, the supreme Court shall have original Jurisdiction. In all the other Cases before mentioned, the supreme Court shall have appellate Jurisdiction, both as to Law and Fact, with such Exceptions, and under such Regulations as the Congress shall make.</p>
+      <p>The Trial of all Crimes, except in Cases of Impeachment, shall be by Jury; and such Trial shall be held in the State where the said Crimes shall have been committed; but when not committed within any State, the Trial shall be at such Place or Places as the Congress may by Law have directed.</p></ul>
+    <h3>Section 3</h3>
+    <ul><p>Treason against the United States, shall consist only in levying War against them, or in adhering to their Enemies, giving them Aid and Comfort. No Person shall be convicted of Treason unless on the Testimony of two Witnesses to the same overt Act, or on Confession in open Court.</p>
+      <p>The Congress shall have power to declare the Punishment of Treason, but no Attainder of Treason shall work Corruption of Blood, or Forfeiture except during the Life of the Person attainted.</p></ul>
+      
+  <h2 id="Article 4">Article 4</h2>
+    <h3>Section 1</h3>
+    <ul><p>Full Faith and Credit shall be given in each State to the public Acts, Records, and judicial Proceedings of every other State. And the Congress may by general Laws prescribe the Manner in which such Acts, Records and Proceedings shall be proved, and the Effect thereof.</p></ul>
+    <h3>Section 2</h3>
+    <ul><p>The Citizens of each State shall be entitled to all Privileges and Immunities of Citizens in the several States.</p>
+      <p>A Person charged in any State with Treason, Felony, or other Crime, who shall flee from Justice, and be found in another State, shall on demand of the executive Authority of the State from which he fled, be delivered up, to be removed to the State having Jurisdiction of the Crime.</p>
+      <p>No Person held to Service or Labour in one State, under the Laws thereof, escaping into another, shall, in Consequence of any Law or Regulation therein, be discharged from such Service or Labour, But shall be delivered up on Claim of the Party to whom such Service or Labour may be due.</p></ul>
+    <h3>Section 3</h3>
+    <ul><p>New States may be admitted by the Congress into this Union; but no new States shall be formed or erected within the Jurisdiction of any other State; nor any State be formed by the Junction of two or more States, or parts of States, without the Consent of the Legislatures of the States concerned as well as of the Congress.</p>
+      <p>The Congress shall have Power to dispose of and make all needful Rules and Regulations respecting the Territory or other Property belonging to the United States; and nothing in this Constitution shall be so construed as to Prejudice any Claims of the United States, or of any particular State.</p></ul>
+    <h3>Section 4</h3>
+    <ul><p>The United States shall guarantee to every State in this Union a Republican Form of Government, and shall protect each of them against Invasion; and on Application of the Legislature, or of the Executive (when the Legislature cannot be convened) against domestic Violence.</p></ul>
+    
+  <h2 id="Article 5">Article 5</h2>
+  <ul><p>The Congress, whenever two thirds of both Houses shall deem it necessary, shall propose Amendments to this Constitution, or, on the Application of the Legislatures of two thirds of the several States, shall call a Convention for proposing Amendments, which, in either Case, shall be valid to all Intents and Purposes, as part of this Constitution, when ratified by the Legislatures of three fourths of the several States, or by Conventions in three fourths thereof, as the one or the other Mode of Ratification may be proposed by the Congress; Provided that no Amendment which may be made prior to the Year One thousand eight hundred and eight shall in any Manner affect the first and fourth Clauses in the Ninth Section of the first Article; and that no State, without its Consent, shall be deprived of its equal Suffrage in the Senate.</p></ul>
 
-      <h2>Article 4</h2>
-      <h3>Section 1</h3>
-      <ul><p>Full Faith and Credit shall be given in each State to the public Acts, Records, and judicial Proceedings of every other State. And the Congress may by general Laws prescribe the Manner in which such Acts, Records and Proceedings shall be proved, and the Effect thereof.</p></ul>
-      <h3>Section 2</h3>
-      <ul><p>The Citizens of each State shall be entitled to all Privileges and Immunities of Citizens in the several States.</p>
-        <p>A Person charged in any State with Treason, Felony, or other Crime, who shall flee from Justice, and be found in another State, shall on demand of the executive Authority of the State from which he fled, be delivered up, to be removed to the State having Jurisdiction of the Crime.</p>
-        <p>No Person held to Service or Labour in one State, under the Laws thereof, escaping into another, shall, in Consequence of any Law or Regulation therein, be discharged from such Service or Labour, But shall be delivered up on Claim of the Party to whom such Service or Labour may be due.</p></ul>
-      <h3>Section 3</h3>
-      <ul><p>New States may be admitted by the Congress into this Union; but no new States shall be formed or erected within the Jurisdiction of any other State; nor any State be formed by the Junction of two or more States, or parts of States, without the Consent of the Legislatures of the States concerned as well as of the Congress.</p>
-        <p>The Congress shall have Power to dispose of and make all needful Rules and Regulations respecting the Territory or other Property belonging to the United States; and nothing in this Constitution shall be so construed as to Prejudice any Claims of the United States, or of any particular State.</p></ul>
-      <h3>Section 4</h3>
-      <ul><p>The United States shall guarantee to every State in this Union a Republican Form of Government, and shall protect each of them against Invasion; and on Application of the Legislature, or of the Executive (when the Legislature cannot be convened) against domestic Violence.</p></ul>
+  <h2 id="Article 6">Article 6</h2>
+  <ul><p>All Debts contracted and Engagements entered into, before the Adoption of this Constitution, shall be as valid against the United States under this Constitution, as under the Confederation.</p>
+      <p>This Constitution, and the Laws of the United States which shall be made in Pursuance thereof; and all Treaties made, or which shall be made, under the Authority of the United States, shall be the supreme Law of the Land; and the Judges in every State shall be bound thereby, any Thing in the Constitution or Laws of any State to the Contrary notwithstanding.</p>
+      <p>The Senators and Representatives before mentioned, and the Members of the several State Legislatures, and all executive and judicial Officers, both of the United States and of the several States, shall be bound by Oath or Affirmation, to support this Constitution; but no religious Test shall ever be required as a Qualification to any Office or public Trust under the United States.</p></ul>
+      
+  <h2 id="Article 7">Article 7</h2>
+  <ul><p>The Ratification of the Conventions of nine States, shall be sufficient for the Establishment of this Constitution between the States so ratifying the Same.</p>
+    <p>Done in Convention by the Unanimous Consent of the States present the Seventeenth Day of September in the Year of our Lord one thousand seven hundred and Eighty seven and of the Independence of the United States of America the Twelfth. In Witness whereof We have hereunto subscribed our Names.</p></ul>
 
-      <h2>Article 5</h2>
-      <ul><p>The Congress, whenever two thirds of both Houses shall deem it necessary, shall propose Amendments to this Constitution, or, on the Application of the Legislatures of two thirds of the several States, shall call a Convention for proposing Amendments, which, in either Case, shall be valid to all Intents and Purposes, as part of this Constitution, when ratified by the Legislatures of three fourths of the several States, or by Conventions in three fourths thereof, as the one or the other Mode of Ratification may be proposed by the Congress; Provided that no Amendment which may be made prior to the Year One thousand eight hundred and eight shall in any Manner affect the first and fourth Clauses in the Ninth Section of the first Article; and that no State, without its Consent, shall be deprived of its equal Suffrage in the Senate.</p></ul>
-
-      <h2>Article 6</h2>
-      <ul><p>All Debts contracted and Engagements entered into, before the Adoption of this Constitution, shall be as valid against the United States under this Constitution, as under the Confederation.</p>
-        <p>This Constitution, and the Laws of the United States which shall be made in Pursuance thereof; and all Treaties made, or which shall be made, under the Authority of the United States, shall be the supreme Law of the Land; and the Judges in every State shall be bound thereby, any Thing in the Constitution or Laws of any State to the Contrary notwithstanding.</p>
-        <p>The Senators and Representatives before mentioned, and the Members of the several State Legislatures, and all executive and judicial Officers, both of the United States and of the several States, shall be bound by Oath or Affirmation, to support this Constitution; but no religious Test shall ever be required as a Qualification to any Office or public Trust under the United States.</p></ul>
-
-      <h2>Article 7</h2>
-      <ul><p>The Ratification of the Conventions of nine States, shall be sufficient for the Establishment of this Constitution between the States so ratifying the Same.</p>
-        <p>Done in Convention by the Unanimous Consent of the States present the Seventeenth Day of September in the Year of our Lord one thousand seven hundred and Eighty seven and of the Independence of the United States of America the Twelfth. In Witness whereof We have hereunto subscribed our Names.</p></ul>
-
-      <h1>Amendments</h1>
-      <h2>Bill Of Rights: </h2>
-      <ul>
-        <li>
-          <h3>Amendment 1</h3>
+<h1 id="Amendments">Amendments</h1>
+    <h2 id="Bill Of Rights">Bill Of Rights: </h2>
+    <ul>
+      <li>
+        <h3>Amendment 1</h3>
           <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
         </li>
         <li>
