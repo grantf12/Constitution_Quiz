@@ -2,14 +2,16 @@ import React from "react";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
 import "./App.css";
-import Signup from "./pages/signup"
+import Signup from "./pages/signup";
+import Home from "./pages/home";
 
-const  App = () => {
+const App = () => {
   
     return (
       <Router>
         <div>
       <Route exact path="/" component={Signup} />
+      <Route exact path="/home" component={Home} />
 
         </div>
 
