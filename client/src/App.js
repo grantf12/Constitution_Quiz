@@ -4,6 +4,7 @@ import axios from "axios";
 import "./App.css";
 import Signup from "./pages/signup";
 import Home from "./pages/home";
+import quiz from "./pages/quiz";
 
 class App extends Component {
   constructor(){
@@ -43,6 +44,8 @@ class App extends Component {
         <div>
       <Route exact path="/" component={Signup} />
       <Route exact path="/home" component={Home} />
+      <Route exact path="/quiz" component={quiz} />
+      
 
         </div>
 
