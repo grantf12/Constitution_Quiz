@@ -6,7 +6,7 @@ const SignupForm = () => {
       <h2>Signup Form</h2>
       <form className="signup">
         <div className="form-group">
-          <label for="exampleInputEmail">Email adress</label>
+          <label htmlFor="exampleInputEmail">Email adress</label>
           <input
             type="email"
             className="form-control"
@@ -15,7 +15,7 @@ const SignupForm = () => {
           />
         </div>
         <div className="form-group">
-          <label for="exampleInputPassword">Password</label>
+          <label htmlFor="exampleInputPassword">Password</label>
           <input
             type="password"
             className="form-control"
