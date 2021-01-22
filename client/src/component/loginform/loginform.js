@@ -6,7 +6,7 @@ function LoginForm() {
       <h2>Login Form</h2>
       <form className="login">
         <div className="form-group">
-          <label for="exampleInputEmail">Email address</label>
+          <label htmlFor="exampleInputEmail">Email address</label>
           <input
             type="email"
             className="form-control"
@@ -16,7 +16,7 @@ function LoginForm() {
         </div>
 
         <div className="form-group">
-          <label for="exampleInputPassword">Password</label>
+          <label htmlFor="exampleInputPassword">Password</label>
           <input
             type="password"
             className="form-control"
