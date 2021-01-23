@@ -1,0 +1,29 @@
+#navbar-link-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-link {
+    float: left;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: white;
+    color: black;
+}
