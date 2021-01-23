@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from "axios";
-import "./App.css";
 import Signup from "./pages/signup";
+import Login from "./pages/loginform";
 import Home from "./pages/home";
 import quiz from "./pages/quiz";
+import Constitution from "./pages/constitution";
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
       loggedIn: false,
@@ -20,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     this.getUser()
   }
-  updateUser (userObject) {
+  updateUser(userObject) {
     this.setState(userObject)
   }
   getUser() {
@@ -32,21 +33,21 @@ class App extends Component {
         })
       } else {
         this.setState({
-          loggedIn: false, 
+          loggedIn: false,
           username: null
         });
       }
     })
   }
-  render(){
+  render() {
     return (
       <Router>
         <div>
-      <Route exact path="/" component={Signup} />
-      <Route exact path="/home" component={Home} />
-      <Route exact path="/quiz" component={quiz} />
-      
-
+          <Route exact path="/" component={Signup} />
+          <Route exact path="/loginform" component={Login} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/quiz" component={quiz} />
+          <Route exact path="/constitution" component={Constitution} />
         </div>
 
       </Router>
