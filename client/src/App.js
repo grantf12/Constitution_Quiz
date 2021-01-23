@@ -5,7 +5,7 @@ import "./App.css";
 import Signup from "./pages/signup";
 import Home from "./pages/home";
 import quiz from "./pages/quiz";
-
+import Signin from "./pages/signin";
 class App extends Component {
   constructor(){
     super()
@@ -45,7 +45,7 @@ class App extends Component {
       <Route exact path="/" component={Signup} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/quiz" component={quiz} />
-      
+      <Route exact path="/login" component={Signin} />
 
         </div>
 

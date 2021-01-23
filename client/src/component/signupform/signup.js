@@ -77,6 +77,7 @@ class Signup extends Component {
             </button>
           </div>
         </form>
+        <p>Or login  <a href="/login">here</a></p>
       </div>
     );
   }
