@@ -5,7 +5,7 @@ const passport = require("../passport")
 
 
 router.post("/", (req,res) => {
-    const {username, passport} = req.body
+    const {username, password} = req.body
 
     User.findOne({username: username}, (err,user) =>{
         if (err) {
@@ -31,6 +31,7 @@ router.post("/", (req,res) => {
 router.post(
     "/login",
     function (req,res,next) {
+        console.log(req.body)
         next()
     },
     passport.authenticate("local"),

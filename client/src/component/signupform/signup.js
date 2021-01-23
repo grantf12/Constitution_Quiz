@@ -1,38 +1,85 @@
-import React from "react";
+import React, { Component } from "react";
+import axios from "axios";
 
-const SignupForm = () => {
-  return (
-    <div className="container">
-      <h2>Signup Form</h2>
-      <form className="signup">
-        <div className="form-group">
-          <label htmlFor="exampleInputEmail">Email adress</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email-input"
-            placeholder="Email"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="exampleInputPassword">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="password-input"
-            placeholder="Password"
-          />
-        </div>
-        <button type="submit" className="btn btn-default">
-          Login
-        </button>
-      </form>
-      <br />
-      <p>
-        If you have already signed up you can login <a href="/">here</a>
-      </p>
-    </div>
-  );
-};
 
-export default SignupForm;
+class Signup extends Component {
+  constructor() {
+    super();
+    this.state = {
+      username: "",
+      password: "",
+      confirmPassword: "",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  }
+  handleSubmit(e) {
+    console.log(this.state.username);
+    e.preventDefault();
+    axios
+      .post("/user/", {
+        username: this.state.username,
+        password: this.state.password,
+      })
+      .then((response) => {
+        if (!response.data.errmsg) {
+          this.setState({
+            redirectTo: "/login",
+          })
+        }
+      });
+  }
+  render() {
+    return (
+      <div className="signupForm">
+        <h4> Sign up</h4>
+        <form className="form-horizontal">
+          <div className="form-group">
+            <label className="form-label" htmlFor="username">
+              Username
+            </label>
+
+            <input
+              className="form-input"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="password">
+              Password
+            </label>
+            <input
+              className="form-input"
+              placeholder="password"
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <button
+              className="btn btn-primary"
+              onClick={this.handleSubmit}
+              type="submit"
+            >
+              Sign Up!
+            </button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default Signup
