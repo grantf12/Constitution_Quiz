@@ -29,7 +29,7 @@ class Signup extends Component {
       .then((response) => {
         if (!response.data.errmsg) {
           this.setState({
-            redirectTo: "/login",
+            redirectTo: "/loginform",
           })
         }
       });
@@ -77,6 +77,7 @@ class Signup extends Component {
             </button>
           </div>
         </form>
+        <p>Or login  <a href="/loginform">here</a></p>
       </div>
     );
   }

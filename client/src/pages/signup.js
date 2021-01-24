@@ -1,44 +1,31 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import axios from "axios";
+import { set } from "lodash";
 
 
-class Signup extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: "",
-      password: "",
-      confirmPassword: "",
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  }
-  handleSubmit(e) {
-    console.log(this.state.username);
+const Signup = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("")
+  const [redirect, setRedirect] = useState(false)
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("/user/", {
-        username: this.state.username,
-        password: this.state.password,
-      })
-      .then((response) => {
-        if (!response.data.errmsg) {
-          this.setState({
-            redirectTo: "/login",
-          })
-        }
-      });
+    .post("/user/", {
+      username,
+      password,
+    }).then((response) => {
+      if (!response.data.errmsg) {
+        setRedirect(true)
+
+      }
+    }).catch((err) => {
+      console.log(err)
+    })
   }
-  render() {
     return (
       <div className="signupForm">
         <h4> Sign up</h4>
-        <form className="form-horizontal">
+        <form className="form-horizontal" onSubmit={handleSubmit}>
           <div className="form-group">
             <label className="form-label" htmlFor="username">
               Username
@@ -50,8 +37,8 @@ class Signup extends Component {
               id="username"
               name="username"
               placeholder="Username"
-              value={this.state.username}
-              onChange={this.handleChange}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="form-group">
@@ -63,14 +50,13 @@ class Signup extends Component {
               placeholder="password"
               type="password"
               name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="form-group">
             <button
               className="btn btn-primary"
-              onClick={this.handleSubmit}
               type="submit"
             >
               Sign Up!
@@ -80,6 +66,6 @@ class Signup extends Component {
       </div>
     );
   }
-}
+
 
 export default Signup

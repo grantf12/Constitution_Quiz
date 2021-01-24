@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from "axios";
-import Signup from "./pages/signup";
+import Signup from "./component/signupform/signup";
 import Login from "./pages/loginform";
 import Home from "./pages/home";
 import quiz from "./pages/quiz";
 import Constitution from "./pages/constitution";
-
+import ProtectedRoute from "./utils/ProtectedRoutes"
 class App extends Component {
   constructor() {
     super()
@@ -38,17 +38,18 @@ class App extends Component {
         });
       }
     })
+    console.log(this.loggedIn)
   }
   render() {
     return (
       <Router>
-        <div>
+       
           <Route exact path="/" component={Signup} />
           <Route exact path="/loginform" component={Login} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/quiz" component={quiz} />
-          <Route exact path="/constitution" component={Constitution} />
-        </div>
+          {/* <Route exact path="/home" component={Home} /> */}
+          <ProtectedRoute exact path="/quiz" component={quiz} isAuth={this.state.loggedIn} />
+          <ProtectedRoute exact path="/constitution" component={Constitution} isAuth={this.state.loggedIn} />
+          <ProtectedRoute path="/home" component={Home} isAuth={this.state.loggedIn}/>
 
       </Router>
     );
