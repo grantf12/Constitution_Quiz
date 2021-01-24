@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 mongoose.Promise = global.Promise
 
 
-const uri = "mongodb://localhost:27017/constitutionproject"
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/constitutionproject"
 
 mongoose.connect(uri).then(
     () => {
@@ -10,6 +10,12 @@ mongoose.connect(uri).then(
     }, err => {
         console.log("Error connecting to mong")
         console.log(err)
+    },
+    {   useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+        
     }
 );
 
