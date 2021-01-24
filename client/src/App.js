@@ -6,7 +6,7 @@ import Login from "./component/loginform/loginform";
 import Home from "./pages/home";
 import quiz from "./pages/quiz";
 import Constitution from "./pages/constitution";
-
+import ProtectedRoute from "./utils/ProtectedRoutes"
 class App extends Component {
   constructor() {
     super()
@@ -38,6 +38,7 @@ class App extends Component {
         });
       }
     })
+    console.log(this.loggedIn)
   }
   render() {
     return (
@@ -45,10 +46,10 @@ class App extends Component {
        
           <Route exact path="/" component={Signup} />
           <Route exact path="/loginform" component={Login} />
-          <Route exact path="/home" component={Home} />
+          {/* <Route exact path="/home" component={Home} /> */}
           <Route exact path="/quiz" component={quiz} />
           <Route exact path="/constitution" component={Constitution} />
-        
+          <ProtectedRoute path="/home" component={Home} isAuth={this.state.loggedIn}/>
 
       </Router>
     );
