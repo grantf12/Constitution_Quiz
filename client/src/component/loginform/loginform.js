@@ -1,86 +1,80 @@
-import React, { Component } from "react";
-import {Redirect} from "react-router-dom"
+import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 
+const LoginForm = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
+  const [message, setMessage] =useState("")
 
-class LoginForm extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: "",
-      password: "",
-      redirectTo: null,
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
-  }
-  handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post("/user/login", {
-        username: this.state.username,
-        password: this.state.password,
+        username,
+        password,
       })
       .then((response) => {
-        if (response.status === 200) {
-          
-          this.setState({
-            redirectTo: "/home",
-          });
-        }
+        console.log(response.status)
+        if (response.status === 200) setRedirect(true);
       })
-      
-  }
-  
-  render() {
-    if(this.state.redirectTo) {
-      return <Redirect to={{ pathname: this.state.redirectTo}}
- />    } else {
-   
-      return (
-        <div>
-          <h4>Login</h4>
-          <form className="form-horizontal">
-            <div className="form-group">
-              <label className="form-label" htmlFor="username">
-                Username
-              </label>
+      .catch((err)=>{
+        console.log(err.response.data)
+        if (err.response.data === "Unauthorized") setMessage("Your username and password do not match our records")
+        else setMessage("Server Error Please Try Again Later")
+        console.log(err);
+        
+      });
+  };
 
-              <input
-                className="form-input"
-                type="text"
-                id="username"
-                name="username"
-                placeholder="username"
-                value={this.state.username}
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label className="form-label" htmlFor="password">Password</label>
-              <input className="form-input"
-                  placeholder="password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  />
-            </div>
-            <div className="form-group">
-              <button className="btn btn-primary"
-              onClick={this.handleSubmit}
-              type="submit">Login</button>
-            </div>
-            
-          </form>
-          <p>Or Signup <a href="/">here</a></p>
-        </div>
-      );
-    }
+  if (redirect) {
+    return <Redirect to="/home" />;
   }
-}
-export default LoginForm
+  return (
+    <div>
+      <h4>Login</h4>
+
+      <form className="form-horizontal" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label className="form-label" htmlFor="username">
+            Username
+          </label>
+
+          <input
+            className="form-input"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label" htmlFor="password">
+            Password
+          </label>
+          <input
+            className="form-input"
+            placeholder="password"
+            name="password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <button className="btn btn-primary" type="submit">
+            Login
+          </button>
+        </div>
+      </form>
+      {message && <div>{message}</div>}
+      <p>
+        Or Signup <a href="/">here</a>
+      </p>
+    </div>
+  );
+};
+export default LoginForm;

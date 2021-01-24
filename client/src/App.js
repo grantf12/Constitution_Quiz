@@ -42,13 +42,13 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+       
           <Route exact path="/" component={Signup} />
           <Route exact path="/loginform" component={Login} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/quiz" component={quiz} />
           <Route exact path="/constitution" component={Constitution} />
-        </div>
+        
 
       </Router>
     );
