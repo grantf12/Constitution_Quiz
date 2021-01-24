@@ -8,8 +8,8 @@ const constitution = () => {
   return (
     <>
       <Navbar />
+      <HeaderOne>Constitution of the United States</HeaderOne>
       <ConstitutionContainer>
-        <HeaderOne>Constitution of the United States</HeaderOne>
         <h3>We the People of the United States, in Order to form a more perfect Union,
         establish Justice, insure domestic Tranquility, provide for the common
         defence, promote the general Welfare, and secure the Blessings of Liberty to

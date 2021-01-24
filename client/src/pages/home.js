@@ -70,8 +70,8 @@ const home = () => {
     return (
         <>
             <Navbar />
-            <Container>
                 <HeaderOne>Welcome to the Constitutional Quiz!</HeaderOne>
+            <Container>
                 <p>
                     <strong>Interesting fact from our Constitution: </strong>
                     <ConstitutionalFactSpan>{randomArray}</ConstitutionalFactSpan>
