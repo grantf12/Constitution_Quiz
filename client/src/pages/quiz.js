@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
 import Navbar from "../component/Navbar/index";
-import Container from "../component/Container/index"
-import QuizSectionContainer from "../component/QuizContainer/index"
+import Container from "../component/Container/index";
+import QuizQuestionSpan from "../component/QuizQuestionSpan/index";
 import QuizQuestionText from "../component/QuizQuestionText/index";
 import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
-import "./style.css";
 import QuizContainer from "../component/QuizContainer/index";
+import "./style.css";
 
 
 const Quiz = () => {
@@ -134,9 +134,10 @@ const Quiz = () => {
     const customStyles = {
         overlay: {
             width: "50%",
-            height: "80%",
-            display: "flex",
-            margin: "auto"
+            height: "60%",
+            display: "flexbox",
+            margin: "auto",
+            overflow: "hidden"
         }
     };
 
@@ -153,7 +154,7 @@ const Quiz = () => {
                         <Container>
                             <QuizContainer>
                                 <HeaderTwo>
-                                    <span>Question {currentQuestion + 1}</span>/{questions.length}
+                                    <QuizQuestionSpan>Question {currentQuestion + 1}</QuizQuestionSpan>/{questions.length}
                                 </HeaderTwo>
                                 <QuizQuestionText>{questions[currentQuestion].question}</QuizQuestionText>
                             </QuizContainer>

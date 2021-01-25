@@ -11,12 +11,20 @@ p {
     text-align: center;
 }
 
+li {
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    text-emphasis: none;
+}
+
 .quiz-choice-button {
     background-color: black;
     color: white;
     border-color: black;
-    margin: .5rem;
-    padding: .25rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -32,8 +40,6 @@ p {
     background-color: black;
     color: white;
     border-color: black;
-    margin: .5rem;
-    padding: .25rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -48,8 +54,6 @@ p {
     background-color: black;
     color: white;
     border-color: black;
-    margin: .5rem;
-    padding: .25rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -62,11 +66,4 @@ p {
 
 #constitution-table-of-contents {
     text-align: center;
-}
-
-li {
-    text-align: center;
-    list-style-type: none;
-    text-decoration: none;
-    text-emphasis: none;
 }
