@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import ReactModal from "react-modal";
 import Navbar from "../component/Navbar/index";
 import Container from "../component/Container/index";
+import QuizContainer from "../component/QuizContainer/index";
 import QuizQuestionSpan from "../component/QuizQuestionSpan/index";
 import QuizQuestionText from "../component/QuizQuestionText/index";
 import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
+import Paragraph from "../component/Paragraph/index";
 import "./style.css";
 
 
@@ -101,7 +103,7 @@ const Quiz = () => {
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [finalScore, setFinalScore] = useState(false);
-    const [score, setScore] = useState([]);
+    const [score, setScore] = useState(0);
 
     const handleAnswerButtonClick = (correct) => {
         if (correct) {
@@ -154,7 +156,7 @@ const Quiz = () => {
                         You scored a {score * 10}, getting {score} of 10 questions right.
                     </Container>
                 ) : (
-                        <Container>
+                        <QuizContainer>
                             <Container>
                                 <HeaderTwo>
                                     <QuizQuestionSpan>Question {currentQuestion + 1}</QuizQuestionSpan>/{questions.length}
@@ -163,7 +165,7 @@ const Quiz = () => {
                             </Container>
                             {questions[currentQuestion].choices.map((choice) => (
                                 <button key={choice.option} className="quiz-choice-button" onClick={() => handleAnswerButtonClick(choice.correct)}>{choice.option}</button>))}
-                        </Container>
+                        </QuizContainer>
                     )}
             </Container>
             <Container>
@@ -175,7 +177,7 @@ const Quiz = () => {
                     <Container>
                         <HeaderOne>HighScores</HeaderOne>
                         <Container>
-                            <p id="new-high-score">{score * 10}</p>
+                            <Paragraph>{score * 10}</Paragraph>
                             <button id="close-modal" onClick={handleCloseModal}>Close</button>
                         </Container>
                     </Container>
@@ -183,7 +185,6 @@ const Quiz = () => {
             </Container>
         </>
     )
-
 }
 
 export default Quiz;
