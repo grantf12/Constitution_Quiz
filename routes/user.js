@@ -1,4 +1,5 @@
 const express = require("express");
+const { db } = require("../database/models/user");
 const router = express.Router()
 const User = require("../database/models/user")
 const passport = require("../passport")
@@ -58,6 +59,18 @@ router.post("/logout", (req,res) => {
     } else {
         res.send({msg: "no user to log out"})
     }
+})
+
+router.post("/score", (req,res) => {
+    console.log("success")
+    const {score} = req.body
+    User.findOneAndUpdate({_id: req.user._id}, {score: score}, (err,user) => {
+        if (err) {
+            console.log("post error in User.js", err)
+            return res.sendStatus(404)
+        } 
+        res.sendStatus(200);
+    })    
 })
 
 module.exports = router
