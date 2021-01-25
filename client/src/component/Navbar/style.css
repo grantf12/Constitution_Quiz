@@ -15,6 +15,12 @@
     list-style-type: none;
 }
 
+#navbar-link-logout {
+    float: right;
+    text-decoration: none;
+    list-style-type: none;
+}
+
 .link {
     display: block;
     color: white;
