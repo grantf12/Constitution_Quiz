@@ -1,14 +1,5 @@
 body {
-    font-family: josefin sans;
-}
-
-p {
-    font-family: josefin sans;
-    font-size: .9rem;
-}
-
-#new-high-score {
-    text-align: center;
+    font-style: josefin sans;
 }
 
 li {
@@ -17,6 +8,10 @@ li {
     text-decoration: none;
     text-emphasis: none;
 }
+
+#new-high-score {
+    text-align: center;
+}    
 
 .quiz-choice-button {
     background-color: black;
@@ -62,8 +57,4 @@ li {
 #close-modal:hover {
     background-color: white;
     color: black;
-}
-
-#constitution-table-of-contents {
-    text-align: center;
 }
