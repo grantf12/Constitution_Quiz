@@ -1,12 +1,17 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
 import axios from "axios";
+import AuthenticationContainer from "../component/AuthenticationContainer/index";
+import InnerAuthenticationContainer from "../component/InnerAuthenticationContainer/index";
+import AuthenticationForm from "../component/AuthenticationForm/index";
+import HeaderTwo from "../component/HeaderTwo/index";
+import AuthenticationParagraph from "../component/AuthenticationParagraph/index";
+import { Redirect } from "react-router-dom";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
-  const [message, setMessage] =useState("")
+  const [message, setMessage] = useState("")
   const [authenticated, setAuthenticated] = useState(false)
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,24 +24,22 @@ const LoginForm = () => {
         console.log(response.status)
         if (response.status === 200) setRedirect(true) && setAuthenticated(true)
       })
-      .catch((err)=>{
+      .catch((err) => {
         console.log(err.response.data)
         if (err.response.data === "Unauthorized") setMessage("Your username and password do not match our records")
         else setMessage("Server Error Please Try Again Later")
         console.log(err);
-        
       });
   };
-
   if (redirect) {
     return <Redirect to="/home" />;
   }
   return (
-    <div>
-      <h4>Login</h4>
-
+    <AuthenticationContainer>
+      <InnerAuthenticationContainer>
+      <HeaderTwo>Login</HeaderTwo>
       <form className="form-horizontal" onSubmit={handleSubmit}>
-        <div className="form-group">
+        <AuthenticationForm>
           <label className="form-label" htmlFor="username">
             Username
           </label>
@@ -50,8 +53,8 @@ const LoginForm = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-        </div>
-        <div className="form-group">
+        </AuthenticationForm>
+        <AuthenticationForm>
           <label className="form-label" htmlFor="password">
             Password
           </label>
@@ -63,18 +66,19 @@ const LoginForm = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-        </div>
-        <div className="form-group">
+        </AuthenticationForm>
+        <AuthenticationForm>
           <button className="btn btn-primary" type="submit">
             Login
           </button>
-        </div>
+        </AuthenticationForm>
       </form>
       {message && <div>{message}</div>}
-      <p>
+      <AuthenticationParagraph>
         Or Signup <a href="/">here</a>
-      </p>
-    </div>
+      </AuthenticationParagraph>
+      </InnerAuthenticationContainer>
+    </AuthenticationContainer>
   );
 };
 export default LoginForm;
