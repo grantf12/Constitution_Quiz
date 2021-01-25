@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import axios from "axios";
-import { set } from "lodash";
+import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
@@ -55,14 +55,18 @@ const Signup = () => {
             />
           </div>
           <div className="form-group">
+            <Link to="/loginform">
             <button
               className="btn btn-primary"
               type="submit"
             >
               Sign Up!
             </button>
+            </Link>
           </div>
         </form>
+        <p>If you're already signed up you can login <a href="loginform
+        ">here</a></p>
       </div>
     );
   }
