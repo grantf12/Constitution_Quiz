@@ -9,6 +9,8 @@ import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
 import Paragraph from "../component/Paragraph/index";
 import "./style.css";
+import QuizContainer from "../component/QuizContainer/index";
+import axios from "axios";
 
 
 const Quiz = () => {
@@ -115,17 +117,21 @@ const Quiz = () => {
             setCurrentQuestion(nextQuestion);
         } else {
             setFinalScore(true);
+            var savedScore = (score * 10);
+            console.log(savedScore);
+                //     I want the score taken to be associated with the user logged-in 
+                //     I want to send both the score and the associated user info to the database to be saved 
+                //     I then want to get the information I saved as the user name and all scores saved
+                //     I finally want to display the user name and all scores when the modal is opened
+                axios
+                .post("/user/score", {
+                        score: savedScore
+                    }).catch((err) => {
+                        console.log(err)
+                    })  
         }
     };
-
-    const saveScores = (score) => {
-        //     I want the score taken to be associated with the user logged-in 
-        //     I want to send both the score and the associated user info to the database to be saved 
-        //     I then want to get the information I saved as the user name and all scores saved
-        //     I finally want to display the user name and all scores when the modal is opened
-
-    };
-
+    
     const [showModal, setShowModal] = useState(false);
 
     const handleOpenModal = () => {
