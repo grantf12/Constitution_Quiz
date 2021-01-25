@@ -9,7 +9,6 @@ import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
 import Paragraph from "../component/Paragraph/index";
 import "./style.css";
-import QuizContainer from "../component/QuizContainer/index";
 import axios from "axios";
 
 
@@ -179,6 +178,7 @@ const Quiz = () => {
                 <ReactModal
                     isOpen={showModal}
                     style={customStyles}
+                    ariaHideApp={false}
                 >
                     <Container>
                         <HeaderOne>HighScores</HeaderOne>
