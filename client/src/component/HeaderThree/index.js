@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-const ConstitutionSectionHeader = (props) => {
+const HeaderThree = (props) => {
     return (
         <h3 className="constitution-section-header">{props.children}</h3>
     )
 }
 
-export default ConstitutionSectionHeader;
+export default HeaderThree;
