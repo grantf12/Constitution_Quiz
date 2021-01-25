@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import ReactModal from "react-modal";
+import Axios from "axios";
 
 const quiz = () => {
     const questions = [
@@ -93,7 +94,7 @@ const quiz = () => {
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [finalScore, setFinalScore] = useState(false);
-    const [score, setScore] = useState(0);
+    const [score, setScore] = useState([]);
 
     const handleAnswerButtonClick = (correct) => {
         if (correct) {
@@ -108,6 +109,10 @@ const quiz = () => {
         }
     };
 
+    const saveScores = (e) => {
+
+    };
+
     const [showModal, setShowModal] = useState(false);
 
     const handleOpenModal = () => {
@@ -117,6 +122,13 @@ const quiz = () => {
     const handleCloseModal = () => {
         setShowModal(false)
     };
+
+    // const customStyles = {
+    //     overlay: {
+    //         width: "70%",
+    //         position: fixed
+    //     }
+    // };
 
     return (
         <div className="container">
@@ -144,6 +156,7 @@ const quiz = () => {
                 <button onClick={handleOpenModal}>HighScore List</button>
                 <ReactModal
                     isOpen={showModal}
+                    // style={customStyles}
                 >
                     <h1 className="text-center">HighScores</h1>
                     <p>{score * 10}</p>

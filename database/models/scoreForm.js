@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const bcrypt = require("bcryptjs");
 mongoose.promise = Promise;
 
-export default funtion scoreForm({ score, scoresSaved }) {
+const scoreForm = ({ score, scoresSaved }) => {
 
     const saveScores = (e) => {
         e.preventDefault();
@@ -17,3 +17,5 @@ export default funtion scoreForm({ score, scoresSaved }) {
     });
 
 };
+
+export default scoreForm;
