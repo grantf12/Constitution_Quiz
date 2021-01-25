@@ -6,7 +6,6 @@ import QuizQuestionSpan from "../component/QuizQuestionSpan/index";
 import QuizQuestionText from "../component/QuizQuestionText/index";
 import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
-import QuizContainer from "../component/QuizContainer/index";
 import "./style.css";
 
 
@@ -102,7 +101,7 @@ const Quiz = () => {
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [finalScore, setFinalScore] = useState(false);
-    const [score, setScore] = useState(0);
+    const [score, setScore] = useState([]);
 
     const handleAnswerButtonClick = (correct) => {
         if (correct) {
@@ -117,13 +116,13 @@ const Quiz = () => {
         }
     };
 
-    // const saveScores = (score) => {
-    //     I want the score taken to be associated with the user logged-in 
-    //     I want to send both the score and the associated user info to the database to be saved 
-    //     I then want to get the information I saved as the user name and all scores saved
-    //     I finally want to display the user name and all scores when the modal is opened
-        
-    // };
+    const saveScores = (score) => {
+        //     I want the score taken to be associated with the user logged-in 
+        //     I want to send both the score and the associated user info to the database to be saved 
+        //     I then want to get the information I saved as the user name and all scores saved
+        //     I finally want to display the user name and all scores when the modal is opened
+
+    };
 
     const [showModal, setShowModal] = useState(false);
 
@@ -156,26 +155,23 @@ const Quiz = () => {
                     </Container>
                 ) : (
                         <Container>
-                            <QuizContainer>
+                            <Container>
                                 <HeaderTwo>
                                     <QuizQuestionSpan>Question {currentQuestion + 1}</QuizQuestionSpan>/{questions.length}
                                 </HeaderTwo>
                                 <QuizQuestionText>{questions[currentQuestion].question}</QuizQuestionText>
-                            </QuizContainer>
-                            <Container>
-                                {questions[currentQuestion].choices.map((choice) => (
-                                    <button key={choice.option} className="quiz-choice-button" onClick={() => handleAnswerButtonClick(choice.correct)}>{choice.option}</button>))}
                             </Container>
+                            {questions[currentQuestion].choices.map((choice) => (
+                                <button key={choice.option} className="quiz-choice-button" onClick={() => handleAnswerButtonClick(choice.correct)}>{choice.option}</button>))}
                         </Container>
                     )}
             </Container>
             <Container>
                 <button id="quiz-highscore-button" onClick={handleOpenModal}>HighScore List</button>
-                <ReactModal 
+                <ReactModal
                     isOpen={showModal}
                     style={customStyles}
-                    ariaHideApp={false}
-                    >
+                >
                     <Container>
                         <HeaderOne>HighScores</HeaderOne>
                         <Container>
