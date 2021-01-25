@@ -102,7 +102,7 @@ const Quiz = () => {
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [finalScore, setFinalScore] = useState(false);
-    const [score, setScore] = useState(0);
+    const [score, setScore] = useState([]);
 
     const handleAnswerButtonClick = (correct) => {
         if (correct) {
@@ -117,6 +117,10 @@ const Quiz = () => {
         }
     };
 
+    // const saveScores = (e) => {
+
+    // };
+
     const [showModal, setShowModal] = useState(false);
 
     const handleOpenModal = () => {
@@ -125,6 +129,15 @@ const Quiz = () => {
 
     const handleCloseModal = () => {
         setShowModal(false)
+    };
+
+    const customStyles = {
+        overlay: {
+            width: "50%",
+            height: "80%",
+            display: "flex",
+            margin: "auto"
+        }
     };
 
     return (
@@ -153,7 +166,10 @@ const Quiz = () => {
             </Container>
             <Container>
                 <button id="quiz-highscore-button" onClick={handleOpenModal}>HighScore List</button>
-                <ReactModal isOpen={showModal}>
+                <ReactModal 
+                    isOpen={showModal}
+                    style={customStyles}
+                    >
                     <Container>
                         <HeaderOne>HighScores</HeaderOne>
                         <Container>
