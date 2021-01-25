@@ -102,7 +102,7 @@ const Quiz = () => {
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [finalScore, setFinalScore] = useState(false);
-    const [score, setScore] = useState([]);
+    const [score, setScore] = useState(0);
 
     const handleAnswerButtonClick = (correct) => {
         if (correct) {
@@ -117,13 +117,13 @@ const Quiz = () => {
         }
     };
 
-    const saveScores = (score) => {
+    // const saveScores = (score) => {
     //     I want the score taken to be associated with the user logged-in 
     //     I want to send both the score and the associated user info to the database to be saved 
     //     I then want to get the information I saved as the user name and all scores saved
     //     I finally want to display the user name and all scores when the modal is opened
         
-    };
+    // };
 
     const [showModal, setShowModal] = useState(false);
 
@@ -173,6 +173,7 @@ const Quiz = () => {
                 <ReactModal 
                     isOpen={showModal}
                     style={customStyles}
+                    ariaHideApp={false}
                     >
                     <Container>
                         <HeaderOne>HighScores</HeaderOne>
