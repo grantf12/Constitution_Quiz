@@ -7,7 +7,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
   const [message, setMessage] =useState("")
-  const [authenticated, setAuthenticated] = useState(false)
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -17,7 +17,7 @@ const LoginForm = () => {
       })
       .then((response) => {
         console.log(response.status)
-        if (response.status === 200) setRedirect(true) && setAuthenticated(true)
+        if (response.status === 200) setRedirect(true) 
       })
       .catch((err)=>{
         console.log(err.response.data)

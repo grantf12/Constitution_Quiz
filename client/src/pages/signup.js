@@ -1,6 +1,6 @@
-import React, { Component, useState } from "react";
+import React, {  useState } from "react";
 import axios from "axios";
-import { set } from "lodash";
+
 import { Redirect } from "react-router-dom";
 
 
