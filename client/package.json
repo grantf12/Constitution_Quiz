@@ -2,12 +2,13 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/", 
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.21.1",
     "lodash": "^4.17.20",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-modal": "^3.12.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.8"
   },

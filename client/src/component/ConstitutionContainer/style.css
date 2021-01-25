@@ -1,0 +1,13 @@
+.container {
+    margin: 2rem;
+    padding: 2rem;
+    line-height: 1.5rem;
+}
+
+.table-of-contents-links {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}

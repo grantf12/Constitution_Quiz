@@ -1,0 +1,72 @@
+body {
+    font-family: josefin sans;
+}
+
+p {
+    font-family: josefin sans;
+    font-size: .9rem;
+}
+
+#new-high-score {
+    text-align: center;
+}
+
+.quiz-choice-button {
+    background-color: black;
+    color: white;
+    border-color: black;
+    margin: .5rem;
+    padding: .25rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.quiz-choice-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#quiz-highscore-button {
+    background-color: black;
+    color: white;
+    border-color: black;
+    margin: .5rem;
+    padding: .25rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#quiz-highscore-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#close-modal {
+    background-color: black;
+    color: white;
+    border-color: black;
+    margin: .5rem;
+    padding: .25rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#close-modal:hover {
+    background-color: white;
+    color: black;
+}
+
+#constitution-table-of-contents {
+    text-align: center;
+}
+
+li {
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    text-emphasis: none;
+}

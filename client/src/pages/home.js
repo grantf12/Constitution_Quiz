@@ -1,6 +1,11 @@
 import React from "react";
+import Navbar from "../component/Navbar/index";
+import Container from "../component/Container/index";
+import HeaderOne from "../component/HeaderOne/index";
+import ConstitutionalFactSpan from "../component/ConstitutionalFactSpan/index";
+import HeaderTwo from "../component/HeaderTwo/index";
 import _ from "lodash";
-
+import {withRouter} from "react-router-dom";
 const home = () => {
     const array = [
         "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.",
@@ -64,20 +69,26 @@ const home = () => {
     const randomArray = _.sample(array);
     return (
         <>
-            <div className="container">
-                <h1>Welcome to the Constitutional Quiz!</h1>
-                <p><strong>Cool fact from our Constitution: </strong>{randomArray}</p>
+            <Navbar />
+            <Container>
+                <div id="flex">
+                    <HeaderOne>Constitution Quiz</HeaderOne>
+                </div>
+                <p>
+                    <strong>Interesting fact from our Constitution: </strong>
+                    <ConstitutionalFactSpan>{randomArray}</ConstitutionalFactSpan>
+                </p>
                 <hr />
-                <h2>About</h2>
+                <HeaderTwo>About</HeaderTwo>
                 <p>Geto morgaŭo hop he, malcit respondeci ki hav. Tien duona pov in. As sori frota kaj. Halo lingvonomo uk sub. Kv metr okej' dupunkto un', et aŭ peto subtegmento. U enz kroma morgaŭa nominativa.</p>
                 <p>Ato senobjekta cirkumflekso frazelemento ke, sin ul kioma daŭrigi parentezo. Sed fi tipo deksesuma singularo, sed eksa volu infinitivo ju. Ajn tempodaŭro praantaŭhieraŭ ia, ju fojo tempo dekono ajn, far i geedzo eksteraĵo. Ses havi denta respondo fo. Men tian halt' s'joro op, to ekde help malcit sur, tuj video helpa ha. Gardi vasta kilometro ato ni, minca kunigi malpli no kaj, uk for kilo decimaloj nedifinita. Duo propozicio sensubjekta to.</p>
                 <p>Ont ek naŭ iometo okulvitroj, ali io hola decimaloj, uk nano mallongigo tempolongo poa. Plu aliom norde al, nek duto triono traigi mo, plus lipa jugoslavo nf enz. Nj mini vato diskriminacio men, aj neniu kasedo pli. Cii tioma zepto vo, fo tuj pasko supre iufoje. Ts tioma malantaŭe fundamento for, ot olog enen nea, ebl voli semi jh. Il ioma eviti kunigi sin. Mi fari priskriba int.</p>
                 <p>Per found laringalo um. Esk tiea olog ad, jam tele landonomo subjunkcio gh. Vole poste egalas ad sed. Nun hosana interalie substantiva co, sekvanta disskribado tra us.</p>
                 <p>I fundamenta konjunkcio por. Ik alial pleje nen, ab unuo reala sin. Armo kial kiu du, ik sep renkonten refleksiva, tuje hebrea iom u. Dato emfazo malantaŭa ali if, plia ekskluzive int to, plej altlernejo if mis.</p>
                 <p>Je duo movi supre, finno kemia mallongigoj int e, poa sori makro parentezo iu. Mem ng jaro nome, nekutima kernovorto ci kuo. Je vela vavo jesigi eks, id patro kemia iom. Do ien vic' onklo dekono, tro ki nuna apude, et nei alta centimetro. Uj estr kaŭzo franjo des. Des ge viro latina.</p>
-            </div>
+            </Container>
         </>
     )
 };
 
-export default home;
+export default withRouter (home);
