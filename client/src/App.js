@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from "axios";
-import Signup from "./pages/signup";
+import Signup from "./component/signupform/signup";
 import Login from "./pages/loginform";
 import Home from "./pages/home";
 import quiz from "./pages/quiz";
