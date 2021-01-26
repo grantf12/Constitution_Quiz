@@ -83,7 +83,7 @@ const home = () => {
                 </InterestingFactContainer>
                 <hr />
                 <HeaderTwo>About</HeaderTwo>
-                <Paragraph>Geto morgaŭo hop he, malcit respondeci ki hav. Tien duona pov in. As sori frota kaj. Halo lingvonomo uk sub. Kv metr okej' dupunkto un', et aŭ peto subtegmento. U enz kroma morgaŭa nominativa.</Paragraph>
+                <Paragraph></Paragraph>
                 <Paragraph>Ato senobjekta cirkumflekso frazelemento ke, sin ul kioma daŭrigi parentezo. Sed fi tipo deksesuma singularo, sed eksa volu infinitivo ju. Ajn tempodaŭro praantaŭhieraŭ ia, ju fojo tempo dekono ajn, far i geedzo eksteraĵo. Ses havi denta respondo fo. Men tian halt' s'joro op, to ekde help malcit sur, tuj video helpa ha. Gardi vasta kilometro ato ni, minca kunigi malpli no kaj, uk for kilo decimaloj nedifinita. Duo propozicio sensubjekta to.</Paragraph>
                 <Paragraph>Ont ek naŭ iometo okulvitroj, ali io hola decimaloj, uk nano mallongigo tempolongo poa. Plu aliom norde al, nek duto triono traigi mo, plus lipa jugoslavo nf enz. Nj mini vato diskriminacio men, aj neniu kasedo pli. Cii tioma zepto vo, fo tuj pasko supre iufoje. Ts tioma malantaŭe fundamento for, ot olog enen nea, ebl voli semi jh. Il ioma eviti kunigi sin. Mi fari priskriba int.</Paragraph>
                 <Paragraph>Per found laringalo um. Esk tiea olog ad, jam tele landonomo subjunkcio gh. Vole poste egalas ad sed. Nun hosana interalie substantiva co, sekvanta disskribado tra us.</Paragraph>
