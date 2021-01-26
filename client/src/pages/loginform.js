@@ -12,7 +12,6 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
   const [message, setMessage] = useState("")
-  const [authenticated, setAuthenticated] = useState(false)
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -52,6 +51,7 @@ const LoginForm = () => {
             placeholder="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            autoComplete="off"
           />
         </AuthenticationForm>
         <AuthenticationForm>
@@ -66,6 +66,7 @@ const LoginForm = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            autoComplete="off"
           /> </div>
         </AuthenticationForm>
         <AuthenticationForm>
