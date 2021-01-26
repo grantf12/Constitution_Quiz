@@ -1,6 +1,10 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-
+import AuthenticationContainer from "../component/AuthenticationContainer/index";
+import InnerAuthenticationContainer from "../component/InnerAuthenticationContainer/index";
+import AuthenticationForm from "../component/AuthenticationForm/index";
+import HeaderTwo from "../component/HeaderTwo/index";
+import AuthenticationParagraph from "../component/AuthenticationParagraph/index";
 import { Redirect } from "react-router-dom";
 
 
@@ -11,30 +15,29 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-    .post("/user/", {
-      username,
-      password,
-    }).then((response) => {
-      if (!response.data.errmsg) {
-        setRedirect(true)
-
-      }
-    }).catch((err) => {
-      console.log(err)
-    })
+      .post("/user/", {
+        username,
+        password,
+      }).then((response) => {
+        if (!response.data.errmsg) {
+          setRedirect(true)
+        }
+      }).catch((err) => {
+        console.log(err)
+      })
   }
   if (redirect) {
     return <Redirect to="/loginform" />;
   }
-    return (
-      <div className="signupForm">
-        <h4> Sign up</h4>
+  return (
+    <AuthenticationContainer>
+      <InnerAuthenticationContainer>
+        <HeaderTwo> Sign up</HeaderTwo>
         <form className="form-horizontal" onSubmit={handleSubmit}>
-          <div className="form-group">
+          <AuthenticationForm>
             <label className="form-label" htmlFor="username">
               Username
             </label>
-
             <input
               className="form-input"
               type="text"
@@ -44,8 +47,8 @@ const Signup = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-          </div>
-          <div className="form-group">
+          </AuthenticationForm>
+          <AuthenticationForm>
             <label className="form-label" htmlFor="password">
               Password
             </label>
@@ -58,22 +61,20 @@ const Signup = () => {
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="off"
             />
-          </div>
-          <div className="form-group">
-            
+          </AuthenticationForm>
+          <AuthenticationForm>
             <button
               className="btn btn-primary"
               type="submit"
             >
               Sign Up!
             </button>
-            
-          </div>
+          </AuthenticationForm>
         </form>
-        <p>If you're already signed up you can login <a href="/loginform">here</a></p>
-      </div>
-    );
-  }
+        <AuthenticationParagraph>If you're already signed up you can login <a href="/loginform">here</a></AuthenticationParagraph>
+      </InnerAuthenticationContainer>
+    </AuthenticationContainer>
+  );
+}
 
-
-export default Signup
+export default Signup;

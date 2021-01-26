@@ -1,22 +1,25 @@
 body {
-    font-family: josefin sans;
+    font-style: josefin sans;
 }
 
-p {
-    font-family: josefin sans;
-    font-size: .9rem;
+li {
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    text-emphasis: none;
 }
 
 #new-high-score {
     text-align: center;
-}
+}    
 
 .quiz-choice-button {
     background-color: black;
     color: white;
     border-color: black;
-    margin: .5rem;
-    padding: .25rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -32,8 +35,6 @@ p {
     background-color: black;
     color: white;
     border-color: black;
-    margin: .5rem;
-    padding: .25rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -48,8 +49,6 @@ p {
     background-color: black;
     color: white;
     border-color: black;
-    margin: .5rem;
-    padding: .25rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -58,15 +57,4 @@ p {
 #close-modal:hover {
     background-color: white;
     color: black;
-}
-
-#constitution-table-of-contents {
-    text-align: center;
-}
-
-li {
-    text-align: center;
-    list-style-type: none;
-    text-decoration: none;
-    text-emphasis: none;
 }
