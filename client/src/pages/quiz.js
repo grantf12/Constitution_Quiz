@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import Navbar from "../component/Navbar/index";
 import Container from "../component/Container/index";
@@ -42,14 +42,14 @@ const Quiz = () => {
             ],
         },
         {
-            question: "Does the constitution have spelling errors?",
+            question: "The constitution has spelling errors.",
             choices: [
                 { option: "True", correct: true },
                 { option: "False", correct: false },
             ],
         },
         {
-            question: "The constitution had a bill of rights when it was ratified.",
+            question: "The constitution had a bill of rights when it was first signed.",
             choices: [
                 { option: "True", correct: false },
                 { option: "False", correct: true },
@@ -65,7 +65,7 @@ const Quiz = () => {
             ],
         },
         {
-            question: "Who did not help write the constitution?",
+            question: "Who did not sign the constitution?",
             choices: [
                 { option: "Benjamin Franklin", correct: false },
                 { option: "Alexander Hamilton", correct: false },
@@ -106,35 +106,41 @@ const Quiz = () => {
     const [finalScore, setFinalScore] = useState(false);
     const [score, setScore] = useState(0);
 
-    const handleAnswerButtonClick = (correct) => {
-        if (correct) {
-            setScore(score + 1);
+    useEffect(() => {
+        if (currentQuestion === questions.length) {
+            axios
+            .post("/user/score", {
+                score
+            }).then(() => {
+                setFinalScore(true);
+            })
+            .catch((err) => {
+                console.log(err)
+            })
         }
+    },[currentQuestion]);
 
-        const nextQuestion = currentQuestion + 1;
-        if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion);
-        } else {
-            setFinalScore(true);
-            var savedScore = (score * 10);
-            console.log(savedScore);
-                //     I want the score taken to be associated with the user logged-in 
-                //     I want to send both the score and the associated user info to the database to be saved 
-                //     I then want to get the information I saved as the user name and all scores saved
-                //     I finally want to display the user name and all scores when the modal is opened
-                axios
-                .post("/user/score", {
-                        score: savedScore
-                    }).catch((err) => {
-                        console.log(err)
-                    })  
-        }
+    const handleAnswerButtonClick = (correct) => {
+        setCurrentQuestion(currentQuestion + 1);
+        if (correct && !finalScore) {
+            setScore(score + 10);
+        }        
+        //     I want the score taken to be associated with the user logged-in 
+        //     I want to send both the score and the associated user info to the database to be saved 
+        //     I then want to get the information I saved as the user name and all scores saved
+        //     I finally want to display the user name and all scores when the modal is opened
+        
     };
-    
+
     const [showModal, setShowModal] = useState(false);
 
     const handleOpenModal = () => {
-        setShowModal(true)
+        setShowModal(true);
+        // axios
+        // .get("/user/score", {
+        //     score
+        // })
+        // console.log(score);
     };
 
     const handleCloseModal = () => {
@@ -150,15 +156,15 @@ const Quiz = () => {
             overflow: "hidden"
         }
     };
-
+console.log(currentQuestion);
     return (
         <>
             <Navbar />
             <Container>
                 <HeaderOne>Quiz</HeaderOne>
-                {finalScore ? (
+                {finalScore || currentQuestion >= questions.length ? (
                     <Container>
-                        You scored a {score * 10}, getting {score} of 10 questions right.
+                        You scored a {score}, getting {Math.floor(score / 10)} of 10 questions right.
                     </Container>
                 ) : (
                         <QuizContainer>
@@ -183,7 +189,7 @@ const Quiz = () => {
                     <Container>
                         <HeaderOne>HighScores</HeaderOne>
                         <Container>
-                            <Paragraph>{score * 10}</Paragraph>
+                            <Paragraph>{score}</Paragraph>
                             <button id="close-modal" onClick={handleCloseModal}>Close</button>
                         </Container>
                     </Container>
