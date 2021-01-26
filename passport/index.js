@@ -6,7 +6,6 @@ const User = require("../database/models/user")
 
 
 passport.serializeUser((user, done) => {
-    console.log(user)
     done(null, {_id: user._id})
 })
 

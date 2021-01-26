@@ -6,7 +6,7 @@ mongoose.promise = Promise;
 const userSchema = new Schema({
     username: {type: String, unique: true, required: true},
     password: { type: String, unique: false, required: true},
-    score: { type: Number, unique: false, required: false, default: 0}
+    score: { type: Array, unique: false, required: false}
 })
 
 

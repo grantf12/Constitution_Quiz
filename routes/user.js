@@ -64,7 +64,7 @@ router.post("/logout", (req,res) => {
 router.post("/score", (req,res) => {
     console.log("success")
     const {score} = req.body
-    User.findOneAndUpdate({_id: req.user._id}, {score: score}, (err,user) => {
+    User.findOneAndUpdate({_id: req.user._id}, { "$push": {score: score}}, (err,user) => {
         if (err) {
             console.log("post error in User.js", err)
             return res.sendStatus(404)
