@@ -28,6 +28,7 @@ li {
 
 .username-input {
     border-style: solid;
+    border-color: white;
     background-color: #3c3b6e;
     color: white;
     box-sizing: auto;
@@ -67,12 +68,12 @@ li {
 }    
 
 .quiz-choice-button {
-    background-color: #B22234;
+    background-color: #3C3B6E;
     color: white;
     border-color: white;
-    margin-left: .15rem;
-    margin-right: .15rem;
-    margin-bottom: .15rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -82,14 +83,11 @@ li {
 
 .quiz-choice-button:hover {
     font-weight: 600;
-}
-
-.quiz-choice-button:focus {
-    background-color: #3C3B6E;
+    background-color: #B22234;
 }
 
 #quiz-highscore-button {
-    background-color: #B22234;
+    background-color: #3C3B6E;
     color: white;
     border-color: white;
     text-align: center;
@@ -101,11 +99,7 @@ li {
 }
 #quiz-highscore-button:hover {
     font-weight: 600;
-}
-
-#quiz-highscore-button:focus {
-    background-color: #3C3B6E;
-    font-weight: 600;
+    background-color: #B22234;
 }
 
 #close-modal {
@@ -121,10 +115,7 @@ li {
 }
 #close-modal:hover {
     font-weight: 600;
-}
-#close-modal:focus {
     background-color: #B22234;
-    font-weight: 600;
 }
 
 .submit-button {
@@ -140,8 +131,5 @@ li {
 }
 .submit-button:hover {
     font-weight: 600;
-}
-.submit-button:focus {
     background-color: #B22234;
-    font-weight: 600;
 }
