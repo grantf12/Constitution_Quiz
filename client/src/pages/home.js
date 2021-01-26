@@ -6,6 +6,7 @@ import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
 import ConstitutionalFactSpan from "../component/ConstitutionalFactSpan/index";
 import Paragraph from "../component/Paragraph/index";
+import Footer from "../component/Footer/index";
 import _ from "lodash";
 import { withRouter } from "react-router-dom";
 const home = () => {
@@ -73,7 +74,7 @@ const home = () => {
         <>
             <Navbar />
             <Container>
-                <HeaderOne>Constitution Quiz</HeaderOne>
+                <HeaderOne>Welcome to the Constitution Quiz</HeaderOne>
                 <InterestingFactContainer>
                     <Paragraph>
                         <strong>Interesting fact from our Constitution: </strong>
@@ -89,6 +90,7 @@ const home = () => {
                 <Paragraph>I fundamenta konjunkcio por. Ik alial pleje nen, ab unuo reala sin. Armo kial kiu du, ik sep renkonten refleksiva, tuje hebrea iom u. Dato emfazo malantaŭa ali if, plia ekskluzive int to, plej altlernejo if mis.</Paragraph>
                 <Paragraph>Je duo movi supre, finno kemia mallongigoj int e, poa sori makro parentezo iu. Mem ng jaro nome, nekutima kernovorto ci kuo. Je vela vavo jesigi eks, id patro kemia iom. Do ien vic' onklo dekono, tro ki nuna apude, et nei alta centimetro. Uj estr kaŭzo franjo des. Des ge viro latina.</Paragraph>
             </Container>
+            <Footer>The Constitution Quiz</Footer>
         </>
     )
 };
