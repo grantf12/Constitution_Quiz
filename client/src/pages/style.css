@@ -1,5 +1,8 @@
-body {
-    font-style: josefin sans;
+* {
+    font-family: josefin sans, sans-serif;
+    background-color: #3C3B6E;
+    color: white;
+    font-weight: 400;
 }
 
 li {
@@ -15,7 +18,7 @@ li {
 
 .table-of-contents-link a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .table-of-contents-link a:hover {
     font-weight: 600;
@@ -23,16 +26,40 @@ li {
 
 .form-label {}
 
-.username-input {}
+.username-input {
+    border-style: solid;
+    background-color: #3c3b6e;
+    color: white;
+    box-sizing: auto;
+    padding: .15rem;
+}
 
-.password-input {}
+.username-input:active {
+    border-color: white;
+}
+
+.password-input {
+    border-style: solid;
+    background-color: #3c3b6e;
+    color: white;
+    border-color: white;
+    box-sizing: auto;
+    padding: .15rem;
+}
 
 .username-input::placeholder {
-    font-family: jokerman;
+    font-family: josefin sans, sans-serif;
+    color: white;
 }
 
 .password-input::placeholder {
-    font-family: jokerman;
+    font-family: josefin sans, sans-serif;
+    color: white;
+}
+
+.authorization-form-switch:hover {
+    font-weight: 600;
+    text-emphasis: none;
 }
 
 #new-high-score {
@@ -40,47 +67,81 @@ li {
 }    
 
 .quiz-choice-button {
-    background-color: black;
+    background-color: #B22234;
     color: white;
-    border-color: black;
-    margin-left: .5rem;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
+    border-color: white;
+    margin-left: .15rem;
+    margin-right: .15rem;
+    margin-bottom: .15rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .quiz-choice-button:hover {
-    background-color: white;
-    color: black;
+    font-weight: 600;
+}
+
+.quiz-choice-button:focus {
+    background-color: #3C3B6E;
 }
 
 #quiz-highscore-button {
-    background-color: black;
+    background-color: #B22234;
     color: white;
-    border-color: black;
+    border-color: white;
     text-align: center;
+    margin-top: 1rem;
     text-decoration: none;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.5rem;
 }
 #quiz-highscore-button:hover {
-    background-color: white;
-    color: black;
+    font-weight: 600;
+}
+
+#quiz-highscore-button:focus {
+    background-color: #3C3B6E;
+    font-weight: 600;
 }
 
 #close-modal {
-    background-color: black;
+    background-color: #3C3B6E;
     color: white;
-    border-color: black;
+    border-color: #3C3B6E;
     text-align: center;
+    margin-top: 1rem;
     text-decoration: none;
     cursor: pointer;
     font-size: 1rem;
+    line-height: 1.5rem;
 }
 #close-modal:hover {
-    background-color: white;
-    color: black;
+    font-weight: 600;
+}
+#close-modal:focus {
+    background-color: #B22234;
+    font-weight: 600;
+}
+
+.submit-button {
+    background-color: #3C3B6E;
+    color: white;
+    border-color: white;
+    text-align: center;
+    margin-top: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.submit-button:hover {
+    font-weight: 600;
+}
+.submit-button:focus {
+    background-color: #B22234;
+    font-weight: 600;
 }

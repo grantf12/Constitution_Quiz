@@ -1,4 +1,3 @@
-#quiz-question-container {
-    margin: 1rem;
-    padding: 1rem;
+.quiz-question-container {
+    text-align: center;
 }

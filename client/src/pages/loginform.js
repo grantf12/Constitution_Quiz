@@ -21,7 +21,7 @@ const LoginForm = () => {
       })
       .then((response) => {
         console.log(response.status)
-        if (response.status === 200) setRedirect(true) 
+        if (response.status === 200) setRedirect(true)
       })
       .catch((err) => {
         console.log(err.response.data)
@@ -36,49 +36,44 @@ const LoginForm = () => {
   return (
     <AuthenticationContainer>
       <InnerAuthenticationContainer>
-      <HeaderTwo>Login</HeaderTwo>
-      <form className="form-horizontal" onSubmit={handleSubmit}>
-        <AuthenticationForm>
-          <label className="form-label" htmlFor="username">
-            Username
-          </label>
-
-          <input
-            className="username-input"
-            type="text"
-            id="username"
-            name="username"
-            placeholder="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            autoComplete="off"
-          />
-        </AuthenticationForm>
-        <AuthenticationForm>
-          <div className="form-group">
-          <label className="form-label" htmlFor="password">
-            Password
-          </label>
-          <input
-            className="password-input"
-            placeholder="password"
-            name="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="off"
-          /> </div>
-        </AuthenticationForm>
-        <AuthenticationForm>
-          <button className="btn btn-primary" type="submit">
-            Login
+        <HeaderTwo>Login</HeaderTwo>
+        <form className="form-horizontal" onSubmit={handleSubmit}>
+          <AuthenticationForm>
+            <input
+              className="username-input"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              autoComplete="off"
+            />
+          </AuthenticationForm>
+          <AuthenticationForm>
+            <br />
+            <input
+              className="password-input"
+              placeholder="Password"
+              name="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="off"
+            />
+            <br />
+          </AuthenticationForm>
+          <br />
+          <AuthenticationForm>
+            <button className="submit-button" type="submit">
+              Login!
           </button>
-        </AuthenticationForm>
-      </form>
-      {message && <div>{message}</div>}
-      <AuthenticationParagraph>
-        Or Signup <a href="/">here</a>
-      </AuthenticationParagraph>
+          </AuthenticationForm>
+        </form>
+        {message && <div>{message}</div>}
+        <AuthenticationParagraph>
+          Don't have an account yet? Sign up <a className="authorization-form-switch" href="/">here.</a>
+        </AuthenticationParagraph>
       </InnerAuthenticationContainer>
     </AuthenticationContainer>
   );

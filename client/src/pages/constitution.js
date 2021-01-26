@@ -127,9 +127,9 @@ const constitution = () => {
           <HeaderFour>Section 10</HeaderFour>
           <Paragraph>No State shall enter into any Treaty, Alliance, or Confederation; grant Letters of Marque and Reprisal; coin Money; emit Bills of Credit; make any Thing but gold and silver Coin a Tender in Payment of Debts; pass any Bill of Attainder, ex post facto Law, or Law impairing the Obligation of Contracts, or grant any Title of Nobility.</Paragraph>
           <Paragraph>No State shall, without the Consent of the Congress, lay any Imposts or Duties on Imports or Exports, except what may be absolutely necessary for executing its inspection Laws: and the net Produce of all Duties and Imposts, laid by any State on Imports or Exports, shall be for the Use of the Treasury of the United States; and all such Laws shall be subject to the Revision and Control of the Congress.</Paragraph>
-          <Paragraph>No State shall, without the Consent of Congress, lay any duty of Tonnage, keep Troops, or Ships of War in time of Peace, enter into any Agreement or Compact with another State, or with a foreign Power, or engage in War, unless actually invaded, or in such imminent Danger as will not admit of delay.</Paragraph>
+          <Paragraph>No State shall, without the Consent of Congress, lay any duty of Tonnage, keep Troops, or Ships of War in time of Peace, enter into any<span id="article-2"></span> Agreement or Compact with another State, or with a foreign Power, or engage in War, unless actually invaded, or in such imminent Danger as will not admit of delay.</Paragraph>
         </ArticleContainer>
-        <hr id="article-2" />
+        <hr />
         <ArticleContainer>
           <HeaderThree>Article 2</HeaderThree>
           <HeaderFour>Section 1</HeaderFour>
@@ -149,9 +149,10 @@ const constitution = () => {
           <HeaderFour>Section 3</HeaderFour>
           <Paragraph>He shall from time to time give to the Congress Information of the State of the Union, and recommend to their Consideration such Measures as he shall judge necessary and expedient; he may, on extraordinary Occasions, convene both Houses, or either of them, and in Case of Disagreement between them, with Respect to the Time of Adjournment, he may adjourn them to such Time as he shall think proper; he shall receive Ambassadors and other public Ministers; he shall take Care that the Laws be faithfully executed, and shall Commission all the Officers of the United States.</Paragraph>
           <HeaderFour>Section 4</HeaderFour>
+          <span id="article-3"></span>
           <Paragraph>The President, Vice President and all civil Officers of the United States, shall be removed from Office on Impeachment for, and Conviction of, Treason, Bribery, or other high Crimes and Misdemeanors.</Paragraph>
         </ArticleContainer>
-        <hr id="article-3" />
+        <hr />
         <ArticleContainer>
           <HeaderThree>Article 3</HeaderThree>
           <HeaderFour>Section 1</HeaderFour>
@@ -162,9 +163,10 @@ const constitution = () => {
           <Paragraph>The Trial of all Crimes, except in Cases of Impeachment, shall be by Jury; and such Trial shall be held in the State where the said Crimes shall have been committed; but when not committed within any State, the Trial shall be at such Place or Places as the Congress may by Law have directed.</Paragraph>
           <HeaderFour>Section 3</HeaderFour>
           <Paragraph>Treason against the United States, shall consist only in levying War against them, or in adhering to their Enemies, giving them Aid and Comfort. No Person shall be convicted of Treason unless on the Testimony of two Witnesses to the same overt Act, or on Confession in open Court.</Paragraph>
+          <span id="article-4"></span>
           <Paragraph>The Congress shall have power to declare the Punishment of Treason, but no Attainder of Treason shall work Corruption of Blood, or Forfeiture except during the Life of the Person attainted.</Paragraph>
         </ArticleContainer>
-        <hr id="article-4" />
+        <hr />
         <ArticleContainer>
           <HeaderThree>Article 4</HeaderThree>
           <HeaderFour>Section 1</HeaderFour>
@@ -177,21 +179,21 @@ const constitution = () => {
           <Paragraph>New States may be admitted by the Congress into this Union; but no new States shall be formed or erected within the Jurisdiction of any other State; nor any State be formed by the Junction of two or more States, or parts of States, without the Consent of the Legislatures of the States concerned as well as of the Congress.</Paragraph>
           <Paragraph>The Congress shall have Power to dispose of and make all needful Rules and Regulations respecting the Territory or other Property belonging to the United States; and nothing in this Constitution shall be so construed as to Prejudice any Claims of the United States, or of any particular State.</Paragraph>
           <HeaderFour>Section 4</HeaderFour>
-          <Paragraph>The United States shall guarantee to every State in this Union a Republican Form of Government, and shall protect each of them against Invasion; and on Application of the Legislature, or of the Executive (when the Legislature cannot be convened) against domestic Violence.</Paragraph>
+          <Paragraph>The United States shall guarantee to every State in this Union a<span id="article-5"></span> Republican Form of Government, and shall protect each of them against Invasion; and on Application of the Legislature, or of the Executive (when the Legislature cannot be convened) against domestic Violence.</Paragraph>
         </ArticleContainer>
-        <hr id="article-5" />
+        <hr />
         <ArticleContainer>
           <HeaderThree>Article 5</HeaderThree>
-          <Paragraph>The Congress, whenever two thirds of both Houses shall deem it necessary, shall propose Amendments to this Constitution, or, on the Application of the Legislatures of two thirds of the several States, shall call a Convention for proposing Amendments, which, in either Case, shall be valid to all Intents and Purposes, as part of this Constitution, when ratified by the Legislatures of three fourths of the several States, or by Conventions in three fourths thereof, as the one or the other Mode of Ratification may be proposed by the Congress; Provided that no Amendment which may be made prior to the Year One thousand eight hundred and eight shall in any Manner affect the first and fourth Clauses in the Ninth Section of the first Article; and that no State, without its Consent, shall be deprived of its equal Suffrage in the Senate.</Paragraph>
+          <Paragraph>The Congress, whenever two thirds of both Houses shall deem it necessary, shall propose Amendments to this Constitution, or, on the Application of the Legislatures of two thirds of the several States, shall call a Convention for proposing Amendments, which, in either Case, shall be valid to all Intents and Purposes, as part of this Constitution, when ratified by the Legislatures of three fourths of the several States, or by Conventions in three fourths thereof, as the one or the other Mode of Ratification may be proposed by the Congress; Provided that no Amendment which may be made prior to the Year One thousand eight hundred and eight shall in any Manner affect the first and fourth<span id="article-6"></span> Clauses in the Ninth Section of the first Article; and that no State, without its Consent, shall be deprived of its equal Suffrage in the Senate.</Paragraph>
         </ArticleContainer>
-        <hr id="article-6" />
+        <hr />
         <ArticleContainer>
           <HeaderThree>Article 6</HeaderThree>
           <Paragraph>All Debts contracted and Engagements entered into, before the Adoption of this Constitution, shall be as valid against the United States under this Constitution, as under the Confederation.</Paragraph>
           <Paragraph>This Constitution, and the Laws of the United States which shall be made in Pursuance thereof; and all Treaties made, or which shall be made, under the Authority of the United States, shall be the supreme Law of the Land; and the Judges in every State shall be bound thereby, any Thing in the Constitution or Laws of any State to the Contrary notwithstanding.</Paragraph>
-          <Paragraph>The Senators and Representatives before mentioned, and the Members of the several State Legislatures, and all executive and judicial Officers, both of the United States and of the several States, shall be bound by Oath or Affirmation, to support this Constitution; but no religious Test shall ever be required as a Qualification to any Office or public Trust under the United States.</Paragraph>
+          <Paragraph>The Senators and Representatives before mentioned, and the Members of the several State Legislatures, and all executive and judicial Officers, both of the United States and of the several States, shall be bound by<span id="article-7"></span> Oath or Affirmation, to support this Constitution; but no religious Test shall ever be required as a Qualification to any Office or public Trust under the United States.</Paragraph>
         </ArticleContainer>
-        <hr id="article-7" />
+        <hr />
         <ArticleContainer>
           <HeaderThree>Article 7</HeaderThree>
           <Paragraph>The Ratification of the Conventions of nine States, shall be sufficient for the Establishment of this Constitution between the States so ratifying the Same.</Paragraph>
@@ -222,14 +224,12 @@ const constitution = () => {
         <hr />
         <AmendmentContainer>
           <HeaderThree>Amendment 4</HeaderThree>
-          <span id="amendment-5"></span>
-          <Paragraph>The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.</Paragraph>
+          <Paragraph>The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures,<span id="amendment-5"></span> shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.</Paragraph>
         </AmendmentContainer>
         <hr />
         <AmendmentContainer>
           <HeaderThree>Amendment 5</HeaderThree>
-          <span id="amendment-6"></span>
-          <Paragraph>No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger; nor shall any person be subject for the same offense to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a witness against himself, nor be deprived of life, liberty, or property, without due process of law; nor shall private property be taken for public use, without just compensation.</Paragraph>
+          <Paragraph>No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger; nor shall any person be subject for the same offense to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a<span id="amendment-6"></span> witness against himself, nor be deprived of life, liberty, or property, without due process of law; nor shall private property be taken for public use, without just compensation.</Paragraph>
         </AmendmentContainer>
         <hr />
         <AmendmentContainer>
@@ -276,8 +276,7 @@ const constitution = () => {
           <Paragraph>The Electors shall meet in their respective states, and vote by ballot for President and Vice-President, one of whom, at least, shall not be an inhabitant of the same state with themselves; they shall name in their ballots the person voted for as President, and in distinct ballots the person voted for as Vice-President, and they shall make distinct lists of all persons voted for as President, and of all persons voted for as Vice-President and of the number of votes for each, which lists they shall sign and certify, and transmit sealed to the seat of the government of the United States, directed to the President of the Senate;</Paragraph>
           <Paragraph>The President of the Senate shall, in the presence of the Senate and House of Representatives, open all the certificates and the votes shall then be counted;</Paragraph>
           <Paragraph>The person having the greatest Number of votes for President, shall be the President, if such number be a majority of the whole number of Electors appointed; and if no person have such majority, then from the persons having the highest numbers not exceeding three on the list of those voted for as President, the House of Representatives shall choose immediately, by ballot, the President. But in choosing the President, the votes shall be taken by states, the representation from each state having one vote; a quorum for this purpose shall consist of a member or members from two-thirds of the states, and a majority of all the states shall be necessary to a choice. And if the House of Representatives shall not choose a President whenever the right of choice shall devolve upon them, before the fourth day of March next following, then the Vice-President shall act as President, as in the case of the death or other constitutional disability of the President.</Paragraph>
-          <span id="amendment-13"></span>
-          <Paragraph>The person having the greatest number of votes as Vice-President, shall be the Vice-President, if such number be a majority of the whole number of Electors appointed, and if no person have a majority, then from the two highest numbers on the list, the Senate shall choose the Vice-President; a quorum for the purpose shall consist of two-thirds of the whole number of Senators, and a majority of the whole number shall be necessary to a choice. But no person constitutionally ineligible to the office of President shall be eligible to that of Vice-President of the United States.</Paragraph>
+          <Paragraph>The person having the greatest number of votes as Vice-President, shall be the Vice-President, if such number be a<span id="amendment-13"></span> majority of the whole number of Electors appointed, and if no person have a majority, then from the two highest numbers on the list, the Senate shall choose the Vice-President; a quorum for the purpose shall consist of two-thirds of the whole number of Senators, and a majority of the whole number shall be necessary to a choice. But no person constitutionally ineligible to the office of President shall be eligible to that of Vice-President of the United States.</Paragraph>
         </AmendmentContainer>
         <hr />
         <AmendmentContainer>

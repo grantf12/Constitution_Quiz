@@ -4,6 +4,7 @@ import Container from "../component/Container/index";
 import InterestingFactContainer from "../component/InterestingFactContainer/index";
 import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
+import InterestingFactHeader from "../component/InterestingFactHeader/index";
 import ConstitutionalFactSpan from "../component/ConstitutionalFactSpan/index";
 import Paragraph from "../component/Paragraph/index";
 import Footer from "../component/Footer/index";
@@ -76,8 +77,10 @@ const home = () => {
             <Container>
                 <HeaderOne>Welcome to the Constitution Quiz</HeaderOne>
                 <InterestingFactContainer>
+                    <InterestingFactHeader>
+                        Interesting fact from our Constitution:
+                    </InterestingFactHeader>
                     <Paragraph>
-                        <strong>Interesting fact from our Constitution: </strong>
                         <ConstitutionalFactSpan>{randomArray}</ConstitutionalFactSpan>
                     </Paragraph>
                 </InterestingFactContainer>
