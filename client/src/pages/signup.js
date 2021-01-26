@@ -56,6 +56,7 @@ const Signup = () => {
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              autoComplete="off"
             />
           </div>
           <div className="form-group">

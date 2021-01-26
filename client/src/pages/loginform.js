@@ -52,7 +52,7 @@ const LoginForm = () => {
           />
         </div>
         <div className="form-group">
-          <label className="form-label" htmlFor="password">
+          <label className="form-label" htmlFor="password" autoComplete="off">
             Password
           </label>
           <input
