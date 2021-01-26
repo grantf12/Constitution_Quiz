@@ -3,7 +3,7 @@ import "./style.css";
 
 const AuthenticationContainer = (props) => {
     return (
-        <form id="authentication-container">{props.children}</form>
+        <div id="authentication-container">{props.children}</div>
     )
 }
 
