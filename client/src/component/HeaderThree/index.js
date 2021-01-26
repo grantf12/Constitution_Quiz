@@ -3,7 +3,7 @@ import "./style.css";
 
 const HeaderThree = (props) => {
     return (
-        <h3 className="constitution-section-header">{props.children}</h3>
+        <h3 className="header-three">{props.children}</h3>
     )
 }
 

@@ -1,0 +1,17 @@
+.a-link {
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.a-link:link {
+    color: black;
+}
+
+.a-link:visited {
+    color: black;
+}
+
+.a-link:hover {
+    font-weight: 500;
+}

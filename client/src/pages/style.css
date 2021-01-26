@@ -9,6 +9,32 @@ li {
     text-emphasis: none;
 }
 
+.table-of-contents-link {
+    text-align: center;
+}
+
+.table-of-contents-link a {
+    text-decoration: none;
+    color: black;
+}
+.table-of-contents-link a:hover {
+    font-weight: 600;
+}
+
+.form-label {}
+
+.username-input {}
+
+.password-input {}
+
+.username-input::placeholder {
+    font-family: jokerman;
+}
+
+.password-input::placeholder {
+    font-family: jokerman;
+}
+
 #new-high-score {
     text-align: center;
 }    
