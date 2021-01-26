@@ -22,7 +22,7 @@ const LoginForm = () => {
       })
       .then((response) => {
         console.log(response.status)
-        if (response.status === 200) setRedirect(true) && setAuthenticated(true)
+        if (response.status === 200) setRedirect(true) 
       })
       .catch((err) => {
         console.log(err.response.data)
@@ -55,6 +55,7 @@ const LoginForm = () => {
           />
         </AuthenticationForm>
         <AuthenticationForm>
+          <div className="form-group">
           <label className="form-label" htmlFor="password">
             Password
           </label>
@@ -65,7 +66,7 @@ const LoginForm = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          />
+          /> </div>
         </AuthenticationForm>
         <AuthenticationForm>
           <button className="btn btn-primary" type="submit">
