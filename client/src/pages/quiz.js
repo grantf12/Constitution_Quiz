@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import Navbar from "../component/Navbar/index";
-import QuizWrapper from "../component/QuizWrapper/index"
 import Container from "../component/Container/index";
 import QuizContainer from "../component/QuizContainer/index";
 import QuizQuestionContainer from "../component/QuizQuestionContainer/index";
@@ -15,9 +14,10 @@ import QuizQuestionSpan from "../component/QuizQuestionSpan/index";
 import QuizQuestionText from "../component/QuizQuestionText/index";
 import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
-import Paragraph from "../component/Paragraph/index";
 import "./style.css";
 import axios from "axios";
+import UnorderedList from "../component/HighscoreUnorderedList";
+import HeaderThree from "../component/HeaderThree/index";
 
 
 const Quiz = () => {
@@ -143,7 +143,6 @@ const Quiz = () => {
         axios
             .get("/user/score")
             .then((res) => {
-                console.log(res.data);
                 setRecords(res.data);
             })
             .catch(() => {
@@ -164,6 +163,10 @@ const Quiz = () => {
             overflow: "hidden"
         }
     };
+
+    const max = (num) => {
+        return Math.max.apply(null, num)
+    }
 
     return (
         <>
@@ -198,13 +201,20 @@ const Quiz = () => {
                         ariaHideApp={false}
                     >
                         <ModalContainer>
-                            <ModalHeader>High</ModalHeader>
-                            <ModalHeader>Scores</ModalHeader>
+                            <ModalHeader>High Scores</ModalHeader>
                             <ModalContainer>
                                 <CurrentHighScore>
-                                    {records.map((record, index) =>
-                                        <li className="record" key={index}>{record}</li>
-                                    )}
+                                    <HeaderThree>Highest Score:
+                                        <p className="highest-score">{max(records)}%</p>
+                                    </HeaderThree>
+                                    <HeaderThree>Current Attempt:
+                                        <p className="current-attempt">{score}%</p>
+                                    </HeaderThree>
+                                    <UnorderedList>
+                                        {records.map((record, index) =>
+                                            <li key={index}>{record}%</li>
+                                        )}
+                                    </UnorderedList>
                                 </CurrentHighScore>
                                 <button id="close-modal" onClick={handleCloseModal}>Close</button>
                             </ModalContainer>
