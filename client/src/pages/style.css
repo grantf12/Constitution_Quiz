@@ -163,3 +163,11 @@ li {
     font-weight: 600;
     background-color: #B22234;
 }
+
+.highest-score {
+    text-align: center;
+}
+
+.current-attempt {
+    text-align: center;
+}
