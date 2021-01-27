@@ -3,7 +3,7 @@ import "./style.css";
 
 const UnorderedList = (props) => {
     return(
-        <ul className="highscore-unordered-list">{props.children}</ul>
+        <ul className="highscore-unordered-list row">{props.children}</ul>
     )
 }
 

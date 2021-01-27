@@ -202,9 +202,18 @@ const Quiz = () => {
                             <ModalHeader>HighScores</ModalHeader>
                             <ModalContainer>
                                 <CurrentHighScore>
+                                    <div className="row">
+                                        <h3 className="col-sm-6">Highest Score
+                                            {Math.max(records.map((record, index) =>
+                                                <h3 key={index}>{record}%</h3>))}
+                                        </h3>
+                                        <h4 className="col-sm-6">Current Attempt
+                                            <h4>{score}%</h4>
+                                        </h4>
+                                    </div>
                                     <UnorderedList>
                                         {records.map((record, index) =>
-                                            <li key={index}>{record}</li>
+                                            <li key={index}>{record}%</li>
                                         )}
                                     </UnorderedList>
                                 </CurrentHighScore>
