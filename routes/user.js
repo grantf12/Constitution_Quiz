@@ -62,7 +62,6 @@ router.post("/logout", (req,res) => {
 })
 
 router.post("/score", (req,res) => {
-    console.log("success")
     const {score} = req.body
     User.findOneAndUpdate({_id: req.user._id}, { "$push": {score: score}}, (err,user) => {
         if (err) {
@@ -70,6 +69,19 @@ router.post("/score", (req,res) => {
             return res.sendStatus(404)
         } 
         res.sendStatus(200);
+    })    
+})
+
+router.get("/score", (req,res) => {
+    console.log("success")
+    User.findOne({_id: req.user._id}, (err,user) => {
+        console.log(user.score)
+        if (err) {
+            console.log("post error in User.js", err)
+            return res.sendStatus(404)
+        } 
+        res.json(user.score);
+
     })    
 })
 
