@@ -7,7 +7,6 @@ import HeaderTwo from "../component/HeaderTwo/index";
 import AuthenticationParagraph from "../component/AuthenticationParagraph/index";
 import { Redirect } from "react-router-dom";
 
-
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("")
@@ -35,11 +34,8 @@ const Signup = () => {
         <HeaderTwo> Sign up</HeaderTwo>
         <form className="form-horizontal" onSubmit={handleSubmit}>
           <AuthenticationForm>
-            <label className="form-label" htmlFor="username">
-              Username
-            </label>
             <input
-              className="form-input"
+              className="username-input"
               type="text"
               id="username"
               name="username"
@@ -49,12 +45,10 @@ const Signup = () => {
             />
           </AuthenticationForm>
           <AuthenticationForm>
-            <label className="form-label" htmlFor="password">
-              Password
-            </label>
+            <br />
             <input
-              className="form-input"
-              placeholder="password"
+              className="password-input"
+              placeholder="Password"
               type="password"
               name="password"
               value={password}
@@ -62,16 +56,17 @@ const Signup = () => {
               autoComplete="off"
             />
           </AuthenticationForm>
+          <br />
           <AuthenticationForm>
             <button
-              className="btn btn-primary"
+              className="submit-button"
               type="submit"
             >
-              Sign Up!
+              Sign in!
             </button>
           </AuthenticationForm>
         </form>
-        <AuthenticationParagraph>If you're already signed up you can login <a href="/loginform">here</a></AuthenticationParagraph>
+        <AuthenticationParagraph>Already have an account? Login <a className="authorization-form-switch" href="/loginform">here.</a></AuthenticationParagraph>
       </InnerAuthenticationContainer>
     </AuthenticationContainer>
   );

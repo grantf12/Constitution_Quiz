@@ -2,11 +2,12 @@
     margin: 0;
     padding: 1rem;
     overflow: hidden;
-    background-color: black;
+    background-color:  #B22234;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 1rem;
+    line-height: 1.5rem;
     text-align: center;
 }

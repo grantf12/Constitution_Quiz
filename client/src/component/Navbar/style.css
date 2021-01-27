@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #B22234;
     position: fixed;
     top: 0;
     width: 100%;
@@ -23,6 +23,7 @@
 
 .link {
     display: block;
+    background-color:  #B22234;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -30,6 +31,6 @@
 }
 
 .link:hover {
-    background-color: white;
-    color: black;
+    font-weight: 600;
+    background-color: #3C3B6E;
 }
