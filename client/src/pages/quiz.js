@@ -109,22 +109,22 @@ const Quiz = () => {
     useEffect(() => {
         if (currentQuestion === questions.length) {
             axios
-            .post("/user/score", {
-                score
-            }).then(() => {
-                setFinalScore(true);
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+                .post("/user/score", {
+                    score
+                }).then(() => {
+                    setFinalScore(true);
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
         }
-    },[currentQuestion]);
+    }, [currentQuestion]);
 
     const handleAnswerButtonClick = (correct) => {
         setCurrentQuestion(currentQuestion + 1);
         if (correct && !finalScore) {
             setScore(score + 10);
-        }        
+        }
     };
 
     const [showModal, setShowModal] = useState(false);
@@ -133,14 +133,14 @@ const Quiz = () => {
     const handleOpenModal = () => {
         setShowModal(true);
         axios
-        .get("/user/score")
-        .then((res) => {
-            console.log(res.data);
-            setRecords(res.data);
-        })
-        .catch(() => {
-           console.log("Error!");
-        })
+            .get("/user/score")
+            .then((res) => {
+                console.log(res.data);
+                setRecords(res.data);
+            })
+            .catch(() => {
+                console.log("Error!");
+            })
     };
 
     const handleCloseModal = () => {
@@ -189,7 +189,9 @@ const Quiz = () => {
                         <HeaderOne>HighScores</HeaderOne>
                         <Container>
                             <Paragraph>
-                                {records.map((record, index) => <li key={index}>{record}</li>)}
+                                {records.map((record, index) =>
+                                    <li key={index}>{record}</li>
+                                )}
                             </Paragraph>
                             <button id="close-modal" onClick={handleCloseModal}>Close</button>
                         </Container>
