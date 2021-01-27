@@ -166,8 +166,22 @@ li {
 
 .highest-score {
     text-align: center;
+    background-color: white;
+    color: #3C3B6E;
 }
 
 .current-attempt {
     text-align: center;
+    background-color: white;
+    color: #3C3B6E;
+}
+
+.score-list-item {
+    font-family: josefin sans, sans-serif;
+    font-style: normal;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    text-align: center;
+    background-color: white;
+    color: #3C3B6E;
 }

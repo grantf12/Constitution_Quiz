@@ -14,6 +14,7 @@ import QuizQuestionSpan from "../component/QuizQuestionSpan/index";
 import QuizQuestionText from "../component/QuizQuestionText/index";
 import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
+import ModalHeaderTwo from "../component/ModalHeaderTwo/index";
 import "./style.css";
 import axios from "axios";
 import UnorderedList from "../component/HighscoreUnorderedList";
@@ -204,15 +205,16 @@ const Quiz = () => {
                             <ModalHeader>High Scores</ModalHeader>
                             <ModalContainer>
                                 <CurrentHighScore>
-                                    <HeaderThree>Highest Score:
+                                    <ModalHeaderTwo>Highest Score:
                                         <p className="highest-score">{max(records)}%</p>
-                                    </HeaderThree>
-                                    <HeaderThree>Current Attempt:
+                                    </ModalHeaderTwo>
+                                    <ModalHeaderTwo>Current Attempt:
                                         <p className="current-attempt">{score}%</p>
-                                    </HeaderThree>
+                                    </ModalHeaderTwo>
+                                    <ModalHeaderTwo>Previous Attempts:</ModalHeaderTwo>
                                     <UnorderedList>
                                         {records.map((record, index) =>
-                                            <li key={index}>{record}%</li>
+                                            <li className="score-list-item" key={index}>{record}%</li>
                                         )}
                                     </UnorderedList>
                                 </CurrentHighScore>
