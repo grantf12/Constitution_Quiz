@@ -3,7 +3,7 @@ import "./style.css";
 
 const QuizQuestionContainer = (props) => {
     return (
-        <div id="quiz-question-container">{props.children}</div>
+        <div className="quiz-question-container">{props.children}</div>
     )
 }
 

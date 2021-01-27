@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import Navbar from "../component/Navbar/index";
+import QuizWrapper from "../component/QuizWrapper/index"
 import Container from "../component/Container/index";
 import QuizContainer from "../component/QuizContainer/index";
+import QuizQuestionContainer from "../component/QuizQuestionContainer/index";
+import QuizResultsContainer from "../component/QuizResultsContainer/index";
+import QuizQuestionChoicesContainer from "../component/QuizQuestionChoicesContainer/index";
+import ModalContainer from "../component/ModalContainer/index";
+import ModalHeader from "../component/ModalHeader/index";
+import CurrentHighScore from "../component/CurrentHighScore/index";
+import Footer from "../component/Footer/index";
 import QuizQuestionSpan from "../component/QuizQuestionSpan/index";
 import QuizQuestionText from "../component/QuizQuestionText/index";
 import HeaderOne from "../component/HeaderOne/index";
@@ -109,27 +117,27 @@ const Quiz = () => {
     useEffect(() => {
         if (currentQuestion === questions.length) {
             axios
-            .post("/user/score", {
-                score
-            }).then(() => {
-                setFinalScore(true);
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+                .post("/user/score", {
+                    score
+                }).then(() => {
+                    setFinalScore(true);
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
         }
-    },[currentQuestion]);
+    }, [currentQuestion]);
 
     const handleAnswerButtonClick = (correct) => {
         setCurrentQuestion(currentQuestion + 1);
         if (correct && !finalScore) {
             setScore(score + 10);
-        }        
+        }
         //     I want the score taken to be associated with the user logged-in 
         //     I want to send both the score and the associated user info to the database to be saved 
         //     I then want to get the information I saved as the user name and all scores saved
         //     I finally want to display the user name and all scores when the modal is opened
-        
+
     };
 
     const [showModal, setShowModal] = useState(false);
@@ -156,45 +164,50 @@ const Quiz = () => {
             overflow: "hidden"
         }
     };
-console.log(currentQuestion);
+    console.log(currentQuestion);
     return (
         <>
             <Navbar />
-            <Container>
-                <HeaderOne>Quiz</HeaderOne>
-                {finalScore || currentQuestion >= questions.length ? (
-                    <Container>
-                        You scored a {score}, getting {Math.floor(score / 10)} of 10 questions right.
-                    </Container>
-                ) : (
-                        <QuizContainer>
-                            <Container>
-                                <HeaderTwo>
-                                    <QuizQuestionSpan>Question {currentQuestion + 1}</QuizQuestionSpan>/{questions.length}
-                                </HeaderTwo>
-                                <QuizQuestionText>{questions[currentQuestion].question}</QuizQuestionText>
-                            </Container>
-                            {questions[currentQuestion].choices.map((choice) => (
-                                <button key={choice.option} className="quiz-choice-button" onClick={() => handleAnswerButtonClick(choice.correct)}>{choice.option}</button>))}
-                        </QuizContainer>
-                    )}
-            </Container>
-            <Container>
-                <button id="quiz-highscore-button" onClick={handleOpenModal}>HighScore List</button>
-                <ReactModal
-                    isOpen={showModal}
-                    style={customStyles}
-                    ariaHideApp={false}
-                >
-                    <Container>
-                        <HeaderOne>HighScores</HeaderOne>
-                        <Container>
-                            <Paragraph>{score}</Paragraph>
-                            <button id="close-modal" onClick={handleCloseModal}>Close</button>
-                        </Container>
-                    </Container>
-                </ReactModal>
-            </Container>
+            <QuizWrapper>
+                <QuizContainer>
+                    <HeaderOne>Quiz</HeaderOne>
+                    {finalScore || currentQuestion >= questions.length ? (
+                        <QuizResultsContainer>
+                            You scored a {score}, getting {Math.floor(score / 10)} of 10 questions right.
+                        </QuizResultsContainer>
+                    ) : (
+                            <QuizContainer>
+                                <QuizQuestionContainer>
+                                    <HeaderTwo>
+                                        <QuizQuestionSpan>Question {currentQuestion + 1}</QuizQuestionSpan>/{questions.length}
+                                    </HeaderTwo>
+                                    <QuizQuestionText>{questions[currentQuestion].question}</QuizQuestionText>
+                                </QuizQuestionContainer>
+                                <QuizQuestionChoicesContainer>
+                                    {questions[currentQuestion].choices.map((choice) => (
+                                        <button key={choice.option} className="quiz-choice-button" onClick={() => handleAnswerButtonClick(choice.correct)}>{choice.option}</button>))}
+                                </QuizQuestionChoicesContainer>
+                            </QuizContainer>
+                        )}
+                </QuizContainer>
+                <QuizContainer>
+                    <button id="quiz-highscore-button" onClick={handleOpenModal}>HighScore List</button>
+                    <ReactModal
+                        isOpen={showModal}
+                        style={customStyles}
+                        ariaHideApp={false}
+                    >
+                        <ModalContainer>
+                            <ModalHeader>HighScores</ModalHeader>
+                            <ModalContainer>
+                                <CurrentHighScore>{score}</CurrentHighScore>
+                                <button id="close-modal" onClick={handleCloseModal}>Close</button>
+                            </ModalContainer>
+                        </ModalContainer>
+                    </ReactModal>
+                </QuizContainer>
+            </QuizWrapper>
+            <Footer>The Constitution Quiz</Footer>
         </>
     )
 }

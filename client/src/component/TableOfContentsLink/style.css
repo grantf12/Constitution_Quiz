@@ -1,5 +1,6 @@
 .table-of-contents-link a {
-    font-size: .9rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-align: center;
     align-content: center;
     color: black;

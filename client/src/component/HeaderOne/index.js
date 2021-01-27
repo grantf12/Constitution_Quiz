@@ -3,7 +3,7 @@ import "./style.css";
 
 const HeaderOne = (props) => {
     return (
-        <h3 className="header-one">{props.children}</h3>
+        <h1 className="header-one">{props.children}</h1>
     )
 }
 

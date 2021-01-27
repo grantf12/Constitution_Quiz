@@ -1,4 +1,6 @@
-.header-one {
+.modal-header {
+    background-color: white;
+    color: #3C3B6E;
     font-family: josefin sans, sans-serif;
     font-weight: 900;
     font-style: normal;
