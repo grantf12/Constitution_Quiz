@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import Navbar from "../component/Navbar/index";
-import QuizWrapper from "../component/QuizWrapper/index"
 import Container from "../component/Container/index";
 import QuizContainer from "../component/QuizContainer/index";
 import QuizQuestionContainer from "../component/QuizQuestionContainer/index";
@@ -15,10 +14,10 @@ import QuizQuestionSpan from "../component/QuizQuestionSpan/index";
 import QuizQuestionText from "../component/QuizQuestionText/index";
 import HeaderOne from "../component/HeaderOne/index";
 import HeaderTwo from "../component/HeaderTwo/index";
-import Paragraph from "../component/Paragraph/index";
 import "./style.css";
 import axios from "axios";
 import UnorderedList from "../component/HighscoreUnorderedList";
+import HeaderThree from "../component/HeaderThree/index";
 
 
 const Quiz = () => {
@@ -144,7 +143,6 @@ const Quiz = () => {
         axios
             .get("/user/score")
             .then((res) => {
-                console.log(res.data);
                 setRecords(res.data);
             })
             .catch(() => {
@@ -158,18 +156,22 @@ const Quiz = () => {
 
     const customStyles = {
         overlay: {
-            width: "50%",
-            height: "60%",
+            width: "100%",
+            height: "100%",
             display: "flexbox",
             margin: "auto",
             overflow: "hidden"
         }
     };
 
+    const max = (num) => {
+        return Math.max.apply(null, num)
+    }
+
     return (
         <>
             <Navbar />
-            <QuizWrapper>
+            <Container>
                 <QuizContainer>
                     <HeaderOne>Quiz</HeaderOne>
                     {finalScore || currentQuestion >= questions.length ? (
@@ -199,18 +201,15 @@ const Quiz = () => {
                         ariaHideApp={false}
                     >
                         <ModalContainer>
-                            <ModalHeader>HighScores</ModalHeader>
+                            <ModalHeader>High Scores</ModalHeader>
                             <ModalContainer>
                                 <CurrentHighScore>
-                                    <div className="row">
-                                        <h3 className="col-sm-6">Highest Score
-                                            {Math.max(records.map((record, index) =>
-                                                <h3 key={index}>{record}%</h3>))}
-                                        </h3>
-                                        <h4 className="col-sm-6">Current Attempt
-                                            <h4>{score}%</h4>
-                                        </h4>
-                                    </div>
+                                    <HeaderThree>Highest Score:
+                                        <p className="highest-score">{max(records)}%</p>
+                                    </HeaderThree>
+                                    <HeaderThree>Current Attempt:
+                                        <p className="current-attempt">{score}%</p>
+                                    </HeaderThree>
                                     <UnorderedList>
                                         {records.map((record, index) =>
                                             <li key={index}>{record}%</li>
@@ -222,7 +221,7 @@ const Quiz = () => {
                         </ModalContainer>
                     </ReactModal>
                 </QuizContainer>
-            </QuizWrapper>
+            </Container>
             <Footer>The Constitution Quiz</Footer>
         </>
     )
