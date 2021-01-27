@@ -18,6 +18,7 @@ import HeaderTwo from "../component/HeaderTwo/index";
 import Paragraph from "../component/Paragraph/index";
 import "./style.css";
 import axios from "axios";
+import UnorderedList from "../component/HighscoreUnorderedList";
 
 
 const Quiz = () => {
@@ -201,9 +202,11 @@ const Quiz = () => {
                             <ModalHeader>HighScores</ModalHeader>
                             <ModalContainer>
                                 <CurrentHighScore>
-                                    {records.map((record, index) =>
-                                        <li key={index}>{record}</li>
-                                    )}
+                                    <UnorderedList>
+                                        {records.map((record, index) =>
+                                            <li key={index}>{record}</li>
+                                        )}
+                                    </UnorderedList>
                                 </CurrentHighScore>
                                 <button id="close-modal" onClick={handleCloseModal}>Close</button>
                             </ModalContainer>
