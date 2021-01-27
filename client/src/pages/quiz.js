@@ -157,8 +157,8 @@ const Quiz = () => {
 
     const customStyles = {
         overlay: {
-            width: "50%",
-            height: "60%",
+            width: "100%",
+            height: "100%",
             display: "flexbox",
             margin: "auto",
             overflow: "hidden"
@@ -168,7 +168,7 @@ const Quiz = () => {
     return (
         <>
             <Navbar />
-            <QuizWrapper>
+            <Container>
                 <QuizContainer>
                     <HeaderOne>Quiz</HeaderOne>
                     {finalScore || currentQuestion >= questions.length ? (
@@ -198,11 +198,12 @@ const Quiz = () => {
                         ariaHideApp={false}
                     >
                         <ModalContainer>
-                            <ModalHeader>HighScores</ModalHeader>
+                            <ModalHeader>High</ModalHeader>
+                            <ModalHeader>Scores</ModalHeader>
                             <ModalContainer>
                                 <CurrentHighScore>
                                     {records.map((record, index) =>
-                                        <li key={index}>{record}</li>
+                                        <li className="record" key={index}>{record}</li>
                                     )}
                                 </CurrentHighScore>
                                 <button id="close-modal" onClick={handleCloseModal}>Close</button>
@@ -210,7 +211,7 @@ const Quiz = () => {
                         </ModalContainer>
                     </ReactModal>
                 </QuizContainer>
-            </QuizWrapper>
+            </Container>
             <Footer>The Constitution Quiz</Footer>
         </>
     )
