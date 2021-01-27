@@ -125,22 +125,22 @@ const Quiz = () => {
         if (correct && !finalScore) {
             setScore(score + 10);
         }        
-        //     I want the score taken to be associated with the user logged-in 
-        //     I want to send both the score and the associated user info to the database to be saved 
-        //     I then want to get the information I saved as the user name and all scores saved
-        //     I finally want to display the user name and all scores when the modal is opened
-        
     };
 
     const [showModal, setShowModal] = useState(false);
+    const [records, setRecords] = useState([]);
 
     const handleOpenModal = () => {
         setShowModal(true);
-        // axios
-        // .get("/user/score", {
-        //     score
-        // })
-        // console.log(score);
+        axios
+        .get("/user/score")
+        .then((res) => {
+            console.log(res.data);
+            setRecords(res.data);
+        })
+        .catch(() => {
+           console.log("Error!");
+        })
     };
 
     const handleCloseModal = () => {
@@ -156,7 +156,6 @@ const Quiz = () => {
             overflow: "hidden"
         }
     };
-console.log(currentQuestion);
     return (
         <>
             <Navbar />
@@ -189,7 +188,9 @@ console.log(currentQuestion);
                     <Container>
                         <HeaderOne>HighScores</HeaderOne>
                         <Container>
-                            <Paragraph>{score}</Paragraph>
+                            <Paragraph>
+                                {records.map((record, index) => <li key={index}>{record}</li>)}
+                            </Paragraph>
                             <button id="close-modal" onClick={handleCloseModal}>Close</button>
                         </Container>
                     </Container>
